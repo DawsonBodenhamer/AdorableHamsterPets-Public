@@ -205,7 +205,7 @@ Alright, let's be real. Sometimes things break. Sometimes hamsters exhibit behav
 Here's how to get in touch. And yes, I'm probably going to regret at least one of these options.
 
 *   **The Official, Sensible Routes (Preferred for Bugs & Features):**
-    *   **[GitHub Issues Page](https://github.com/DawsonBodenhamer/Adorable-Hamster-Pets-1.21/issues):** This is the best place for bug reports and feature suggestions. I actually check it. Frequently. It helps keep things organized, and other people can see if their issue is already known.
+    *   **[GitHub Issues Page](https://github.com/DawsonBodenhamer/AdorableHamsterPets-Public/issues):** This is the best place for bug reports and feature suggestions. I actually check it. Frequently. It helps keep things organized, and other people can see if their issue is already known.
     *   **[Official Discord Server](https://discord.gg/w54mk5bqdf):** Come hang out, share pictures of your hamsters, or get help in real-time. It's organized chaos, and you're invited.
 
 *   **The "I Need to Talk to a Human" Options:**
@@ -354,7 +354,7 @@ You can enjoy the mod, show it off in your videos (please do, and a little credi
 *   **Re-upload the mod somewhere else?** Definitely not. Get it from official sources (like Modrinth).
 *   **Sell the mod?** The Minecraft EULA says *I* can't even do that, and you shouldn't either.
 
-For the full, legally-binding-but-hopefully-still-understandable text that lawyers apparently enjoy, please see the `LICENSE.md` file included with the mod. If you're thinking of doing something not covered here, just reach out and ask! I'm generally pretty reasonable, unless you try to precisely replace all my hamsters with sentient cabbages. Then we might have words.
+For the full, legally-binding-but-hopefully-still-understandable text that lawyers apparently enjoy, please see the [`LICENSE.md`](https://github.com/DawsonBodenhamer/AdorableHamsterPets-Public/blob/main/LICENSE.md) file included with the mod. If you're thinking of doing something not covered here, just reach out and ask! I'm generally pretty reasonable, unless you try to precisely replace all my hamsters with sentient cabbages. Then we might have words.
 </details>
 
 
