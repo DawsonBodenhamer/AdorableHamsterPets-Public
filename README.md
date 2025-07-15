@@ -202,17 +202,10 @@ A custom advancements tab, "The Hamster Life," guides you through the thrilling 
 
 Alright, let's be real. Sometimes things break. Sometimes hamsters exhibit behavior that even *I* can't explain (looking at you, hamster #37, who tried to eat a sign). And sometimes you, my friend, might have a stroke of genius that could elevate this mod from "questionably charming" to "quite good."
 
-Here's how to get in touch. And yes, I'm probably going to regret at least one of these options.
+Whether it's your genius ideas, or my not-so-genius mistakes, please tell me all about it! Knowing about either one just makes the mod all that much better. Here's how to get in touch.
 
-*   **The Official, Sensible Routes (Preferred for Bugs & Features):**
-    *   **[GitHub Issues Page](https://github.com/DawsonBodenhamer/AdorableHamsterPets-Public/issues):** This is the best place for bug reports and feature suggestions. I actually check it. Frequently. It helps keep things organized, and other people can see if their issue is already known.
-    *   **[Official Discord Server](https://discord.gg/w54mk5bqdf):** Come hang out, share pictures of your hamsters, or get help in real-time. It's organized chaos, and you're invited.
-
-*   **The "I Need to Talk to a Human" Options:**
-    *   [**Email:**](mailto:dawson@fortheking.design) - For when GitHub feels too impersonal, or you want to send me digital fan mail (or virtual rotten tomatoes).
-    *   [**Website:**](https://www.fortheking.design) - Check out my other stuff! Fair warning, it's mostly graphic design. If you see a distinct lack of hamsters, that's why.
-    *   [**Instagram:**](https://www.instagram.com/artist.for.the.king/) - Theatrical sword-fighting shenanigans, less digital rodents. But hey, pretty pictures!
-    *   **Personal Phone Number (Yes, really. For now.):** 903-747-7268 - Look, I want to make this mod awesome, and direct feedback helps. I reserve the right to remove this if my phone spontaneously combusts from notifications or if I start getting calls at 3 AM about hamster existential crises. Text is definitely best. Use this power wisely. Or don't. We'll see how this goes.
+*   **[GitHub Issues Page](https://github.com/DawsonBodenhamer/Adorable-Hamster-Pets-1.21/issues):** This is the best place for bug reports and feature suggestions. I actually check it. Frequently. It helps keep things organized, and other people can see if their issue is already known.
+*   **[Official Discord Server](https://discord.gg/w54mk5bqdf):** Come hang out, share pictures of your hamsters, or get help in real-time. It's organized chaos, and you're invited.
 
 ## <font color="teal">Bug Reporting Etiquette (Please, I Beg You):</font>
 
@@ -354,7 +347,7 @@ You can enjoy the mod, show it off in your videos (please do, and a little credi
 *   **Re-upload the mod somewhere else?** Definitely not. Get it from official sources (like Modrinth).
 *   **Sell the mod?** The Minecraft EULA says *I* can't even do that, and you shouldn't either.
 
-For the full, legally-binding-but-hopefully-still-understandable text that lawyers apparently enjoy, please see the [`LICENSE.md`](https://github.com/DawsonBodenhamer/AdorableHamsterPets-Public/blob/main/LICENSE.md) file included with the mod. If you're thinking of doing something not covered here, just reach out and ask! I'm generally pretty reasonable, unless you try to precisely replace all my hamsters with sentient cabbages. Then we might have words.
+For the full, legally-binding-but-hopefully-still-understandable text that lawyers apparently enjoy, please see the `LICENSE.md` file included with the mod. If you're thinking of doing something not covered here, just reach out and ask! I'm generally pretty reasonable, unless you try to precisely replace all my hamsters with sentient cabbages. Then we might have words.
 </details>
 
 
