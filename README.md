@@ -204,7 +204,7 @@ Alright, let's be real. Sometimes things break. Sometimes hamsters exhibit behav
 
 Whether it's your genius ideas, or my not-so-genius mistakes, please tell me all about it! Knowing about either one just makes the mod all that much better. Here's how to get in touch.
 
-*   **[GitHub Issues Page](https://github.com/DawsonBodenhamer/Adorable-Hamster-Pets-1.21/issues):** This is the best place for bug reports and feature suggestions. I actually check it. Frequently. It helps keep things organized, and other people can see if their issue is already known.
+*   **[GitHub Issues Page](https://github.com/DawsonBodenhamer/AdorableHamsterPets-Public/issues):** This is the best place for bug reports and feature suggestions. I actually check it. Frequently. It helps keep things organized, and other people can see if their issue is already known.
 *   **[Official Discord Server](https://discord.gg/w54mk5bqdf):** Come hang out, share pictures of your hamsters, or get help in real-time. It's organized chaos, and you're invited.
 
 ## <font color="teal">Bug Reporting Etiquette (Please, I Beg You):</font>
