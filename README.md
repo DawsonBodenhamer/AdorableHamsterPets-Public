@@ -14,7 +14,7 @@ Thanks to Crimson Gaming for the Showcase!
 <p align="center">
   <a href="https://modrinth.com/mod/adorable-hamster-pets/versions?l=fabric"><img src="https://i.imgur.com/sOhq5bK.png" alt="Fabric" width="167" height="auto"></a>
   <a href="https://modrinth.com/mod/adorable-hamster-pets/versions?l=neoforge"><img src="https://i.imgur.com/G7rGadf.png" alt="NeoForge" width="207" height="auto"></a>
-  <a href="https://nolinkyet"><img src="https://i.imgur.com/HHxLpaH.png" alt="Forge" width="168" height="auto"></a>
+  <a href="https://modrinth.com/mod/adorable-hamster-pets/versions?l=forge"><img src="https://i.imgur.com/9MmriAa.png" alt="Forge" width="168" height="auto"></a>
   <a href="https://nolink"><img src="https://i.imgur.com/RMWxRX6.png" alt="Spacer" width="25" height="auto"></a>
   <a href="https://discord.gg/umzr6bJZtY"><img src="https://i.imgur.com/HgsZcO6.png" alt="Discord" width="63" height="auto"></a>
   <a href="https://github.com/DawsonBodenhamer/Adorable-Hamster-Pets-2.0"><img src="https://i.imgur.com/kqpWMBH.png" alt="GitHub" width="63" height="auto"></a>

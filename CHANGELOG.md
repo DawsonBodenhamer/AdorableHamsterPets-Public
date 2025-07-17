@@ -16,10 +16,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 -
 
-
 ---
 
-## [2.0.2] - 2025-07-06
+## [2.3.0] - 2025-07-16
+
+# 1.20.1 Forge/Fabric support has arrived!
+
+## After a long and surprisingly complex battle with the Forge 1.20.1 datapack and build systems, the mod is now fully functional on Forge. Your hamsters are now free to cause chaos across multiple mod loaders.
+
+### Added
+- Official support for Minecraft 1.20.1 for Forge and Fabric.
+
+### Changed
+
+- Improved hamster dismount logic. Hamsters will now be placed at the block the player is looking at (within a 4.5 block range), providing more precise and intuitive placement. I don't know about you, but when I take a hamster off my shoulder in real life, I get to choose where I put it down. It just made sense lol
+- **Particle Changes:**
+  - The ominous trial spawner particles (diamond celebration) and GUST particles (hamster flight trail) both had to be switched out since they don't exist in 1.20.1. I'm using composting particles for the diamond celebration since they have an upward bias, and cloud particles for the hamster flight trail.
+
+### Fixed
+- Fixed a critical bug where hamsters could suffocate inside blocks when dismounted from the shoulder or after impacting a block from being thrown. A robust safe-spawning algorithm now works in tandem with the new dismount logic to ensure hamsters are always placed in a valid, non-obstructed location.
+- Fixed a visual bug where the particle trail for a thrown hamster would appear ahead of its model during flight.
+- Removed the non-functional Hamster Guide Book from the creative mode inventory tab to prevent confusion.
+- Resolved a critical issue on Forge where no custom world generation (hamsters, wild bushes, custom sunflowers) would occur.
+- Fixed a startup crash on Forge related to the Hamster Spawn Egg item registration order by implementing a platform-specific solution.
+- Wrestled the Forge build process to properly include all necessary models, textures and data files.
+---
+
+## [2.0.2] - 2025-07-16
 
 ### Fixed
 - Fixed an issue where Wild Bushes and custom Sunflowers were not generating in the world on the NeoForge version of the mod.
