@@ -17,7 +17,7 @@ Thanks to Crimson Gaming for the Showcase!
   <a href="https://modrinth.com/mod/adorable-hamster-pets/versions?l=forge"><img src="https://i.imgur.com/9MmriAa.png" alt="Forge" width="168" height="auto"></a>
   <a href="https://nolink"><img src="https://i.imgur.com/RMWxRX6.png" alt="Spacer" width="25" height="auto"></a>
   <a href="https://discord.gg/umzr6bJZtY"><img src="https://i.imgur.com/HgsZcO6.png" alt="Discord" width="63" height="auto"></a>
-  <a href="https://github.com/DawsonBodenhamer/Adorable-Hamster-Pets-2.0"><img src="https://i.imgur.com/kqpWMBH.png" alt="GitHub" width="63" height="auto"></a>
+  <a href="https://github.com/DawsonBodenhamer/AdorableHamsterPets-Public"><img src="https://i.imgur.com/kqpWMBH.png" alt="GitHub" width="63" height="auto"></a>
   <a href="https://ko-fi.com/dawsonbodenhamer"><img src="https://i.imgur.com/0ug6BXn.png" alt="Ko-Fi" width="63" height="auto"></a>
 </p>
 
@@ -234,7 +234,7 @@ Fun fact: I've already implemented new features like the custom advancement tree
 <details>
 <summary>Click to expand.</summary>
 
-### For Fabric:
+### For Fabric & Quilt:
 *   **Fabric API:** The big one. The whole show. Duh.
 *   **Architectury API:** The universal translator that makes this all possible.
 *   **GeckoLib:** For the wiggles and jiggles. Essential.
@@ -242,7 +242,7 @@ Fun fact: I've already implemented new features like the custom advancement tree
 *   **Fabric Language Kotlin:** Fabric's preferred brand of Kotlin, needed by Fzzy Config.
 
 
-### For NeoForge:
+### For NeoForge & Forge:
 *   **Architectury API:** Still the universal translator.
 *   **GeckoLib:** Still essential for the wiggles.
 *   **Fzzy Config:** Still here for your tweaking pleasure.
@@ -250,7 +250,7 @@ Fun fact: I've already implemented new features like the custom advancement tree
 
 
 ### Optional (but Recommended for Your Sanity):
-*   **Jade** (Fabric/NeoForge): For seeing what's what, and for the special hamster debug overlay.
+*   **Jade** (Fabric/Quilt/NeoForge/Forge): For seeing what's what, and for the special hamster debug overlay.
 *   **Mod Menu** (Fabric Only): For an easy way to get to that fancy config screen.
 </details>
 
@@ -263,21 +263,18 @@ Fun fact: I've already implemented new features like the custom advancement tree
 Let's get this out of the way: The dark days of unofficial workarounds and digital duct tape are over.
 
 
-As of version 2.0.0, this mod officially supports:
+As of version 2.3.0, this mod officially supports:
 *   **Fabric**
+*   **Quilt**
 *   **NeoForge**
+*   **Forge**
 
 
 Thanks to a basically heroic, caffeine-fueled refactor to the Architectury toolchain, you can now download the appropriate JAR for your loader of choice and enjoy hamster-based chaos without any extra setup.
 
 Actually just kidding about the heroic caffeine-fueled part. It was more like terrified, GitHub conversation-fueled. Huge thanks to [**@fzzyhmstrs**](https://github.com/fzzyhmstrs) on GitHub / @ZeMonkey / @Cool Girl on Discord for all their help. It's doubtful you would be yeeting your hamsters on NeoForge right now if it weren't for them.
 
-
-### **"What about Forge?"**
-A proper Forge port is on the roadmap. It'll happen. Eventually. Probably. Modding is a fickle beast.
-
-
-### **"And Different Minecraft Versions?"**
+### **"What About More Minecraft Versions?"**
 Yes, that's the plan. The goal is to keep the mod updated for the latest versions of Minecraft while also backporting features to older, popular versions where feasible. Your hamster army's temporal conquest is inevitable.
 
 </details>

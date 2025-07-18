@@ -20,12 +20,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.3.0] - 2025-07-16
 
-# 1.20.1 Forge/Fabric support has arrived!
+# 1.20.1 Forge/Fabric/Quilt support has arrived!
 
 ## After a long and surprisingly complex battle with the Forge 1.20.1 datapack and build systems, the mod is now fully functional on Forge. Your hamsters are now free to cause chaos across multiple mod loaders.
 
 ### Added
 - Official support for Minecraft 1.20.1 for Forge and Fabric.
+- Official Quilt support for 1.21.1 and 1.20.1
 
 ### Changed
 
