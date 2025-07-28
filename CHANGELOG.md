@@ -18,6 +18,91 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [3.0.0] - 2025-07-27
+
+# **The Heist & The Haste Update**
+
+## Your hamsters have developed expensive taste, learned new languages, and also contracted the zoomies.
+
+Introducing the brand new **Diamond Stealing** mechanic, where your furry companions will snatch your valuables and challenge you to a game of keep-away. Feed them some **Steamed Green Beans** and witness the true meaning of "zoomies" as they tear around you in a chaotic, super-charged sprint. 
+
+This update also includes a complete, config-driven overhaul of the entire biome spawning system for incredible mod compatibility, smarter AI, new animations, and a ton of critical bug fixes.
+
+#### <font color="red"> **IMPORTANT:** Due to the extensive changes to the spawning system, it is **highly recommended** that you delete your existing config file (`/config/adorablehamsterpets/main.toml`) before loading a world with this version. This will allow the new, more detailed settings to generate correctly. Your old settings will be lost.</font>
+
+---
+
+### Added
+- **Russian, Chinese, and Korean Language Support**
+  -   Ever heard a hamster squeak in Chinese? I didn't think so. But now, you can! Or perhaps you would prefer a little bit of cooing in Russian... or a squeal in Korean? Thanks to a few of the awesome people in The Cheek Pouch Discord channel, the mod has been fully translated to three languages and more on the way!
+- **New Major Feature: Item Stealing & Chase Mechanic**
+  -   Tamed hamsters now have a configurable chance to notice valuable items dropped on the ground (defaults to just diamonds).
+  -   Nearly every aspect of this feature is configurable, including which items can be stolen (you can add any item, multiple items simultaneously, and even items from other mods!).
+  -   When they spot one, they'll perform a unique pounce animation and snatch the item, initiating a playful game of keep-away. The pounce sound effect is even dynamic, changing based on the material of the stolen item in case you modify it in the config!
+  -   While in "heist mode," the hamster will flee if you get too close and cheekily taunt you from a distance with a new animation, encouraging a chase.
+  -   The stolen item is visually rendered in the hamster's mouth, synced with all head movements and animations.
+  -   To get your item back, you have to catch your speedy thief and right-click it. If you take too long, the hamster will get bored and drop the item. But then, hamsters have a short memory, so it will probably pick it up again.
+- **New Major Feature: "Zoomies" for Buffed Hamsters**
+  -   Hamsters under the effect of Steamed Green Beans will now get the "zoomies," a burst of energetic, high-speed activity.
+  -   Instead of wandering aimlessly, they will sprint in dynamic, chaotic circles around their owner.
+  -   When following their owner, they will no longer run in a straight line but will instead dart around randomly in the owner's general direction.
+  -   This frenetic behavior is accompanied by a new custom particle trail that bursts outwards from the hamster as it sprints.
+- **New Sprinting Animation & Standardized Speeds**
+  -   A third-tier "sprinting" animation has been added for the hamster's highest speeds, used during zoomies and fleeing.
+  -   All hamster movement speeds have been standardized across all AI goals for more consistent and predictable behavior.
+  -   Walking and running animations are cuter.
+- **Enhanced Idle Animations**
+  -   Hamsters will now occasionally play one of three new, randomized "looking up" animations when their `LookAtEntity` AI goal is active and they are looking at a nearby target (like you).
+- **New Wild Hamster Settle to Sleep Animations**
+  -   Hamsters will now play one of three new, randomized "settle to sleep" animations, paired with the three already-existing sleeping animations when going to sleep, similar to how tamed hamsters already did when sitting.
+- **Configurable Biome Spawning System (Major Rework)**
+  -   The entire spawning system for both hamsters and world-gen features (bushes, sunflowers) is now controlled by the config file.
+  -   Users can now define exactly where things spawn using biome IDs, vanilla biome tags, and "convention tags" (`c:is_cold`, `c:is_forest`, etc.) for vastly improved compatibility with modded biomes from packs like Terralith and Biomes O' Plenty.
+  -   Each feature and the hamster itself has its own set of include/exclude lists and tag lists, offering granular control over world generation.
+- **New Faster Throw Velocity for Buffed Hamsters**
+  -   Throwing a hamster while it's under the effect of the Steamed Green Bean buff will now launch it at nearly double the default velocity.
+  -   Both the default and buffed throw velocities are now configurable in a new "Hamster Yeet Settings" group in the config.
+  -   (A special thanks to `@Petite` on Discord, who planned to defeat the Ender Dragon using only hamster projectiles. This idea inspired me to ensure they had enough velocity to reach the dragon in the first place! 😂)
+- **Improved Shoulder Dismount Logic**
+  -   When the player dismounts the hamster from their shoulder, it will now be placed at the location where the player was looking if it was safe and within reach. If not within reach, it will spawn at the player's feet.
+- **New Config Option**
+  -   Added a config option to change the default name of the hamster entity to "Hampter" instead of "Hamster," because I wanted to, so I did.
+
+### Changed
+- **Spawning Logic Overhaul**
+  -   The internal logic for determining hamster color variants has been completely rewritten to be "hamster-centric." It now uses a combination of specific biome checks, vanilla tags, and universal convention tags to ensure hamsters spawn in thematically appropriate locations, even in heavily modded worlds. Note: I only had time to test this with Terrralith— so if you're using a different biome generation mod (Biomes O' Plenty, Oh The Biomes You'll Go) you may see more frequent orange hamsters, since they are the default fall back. Or maybe it will work perfectly! Lol.
+  -   The custom sunflower replacement system is now also tag-aware. It will now correctly replace vanilla sunflowers with the harvestable version in any biome that is supposed to have them (including modded biomes), not just the vanilla Sunflower Plains.
+- **Diamond Seeking AI Improved**
+  -   The independent ore-seeking AI is now smarter. Hamsters will now prioritize pathfinding to exposed ores that are visible to the player before considering ores that are completely buried.
+  -   A new particle breadcrumb trail has been added. When a hamster is leading you to an ore, it will now create a faint trail of dust particles along its intended path, making it much easier to see where your tiny prospector is headed.
+- **Death Message Attribution**
+  -   Death messages will now credit the hamster by its name (e.g., "Player was slain by Hampter") instead of attributing the kill to the hamster's owner. Hamsters are now fully complicit in their actions. 😁
+- **Dependencies**
+  -   The Jade mod is no longer a required dependency and is now correctly listed as optional for all mod loaders. The game will no longer crash if Jade is not installed.
+- **Pathfinding & AI**
+  -   Hamster pathfinding penalties around hazards have been strengthened. They will now be much more reluctant to pathfind into or near fire and lava.
+  -   The idle AI goals (Wander, Look At, Look Around) have been re-balanced to prevent them from fighting with each other, resulting in much more natural and less "flickery" idle behavior.
+- **Textures & Animations**
+  -   The textures for the Blue and Lavender hamster variants have been updated with slightly increased saturation to make their colors more distinct and recognizable without being neon.
+  -   The textures for the Wild Cucumber Bushes have been slightly desaturated to help them blend more naturally into the warmer, drier biomes where they typically spawn.
+  -   The transition speed between animations has been reduced from 5 ticks to 2 ticks, resulting less of the "hamster sliding across the ground" type of effect when it is transitioning between movement animations.
+  -   The rotation speed of the hamster has been overhauled to account for it not having a separate head and body like vanilla models, resulting much more snappy rotations and accurate target-facing. Vanilla Minecraft mobs move their head first, and body follows second at a much slower pace. Since my hamsters use Geckolib for the model, they do not have a separate head and body in the same way that vanilla mobs do, which resulted in a quick initial turn where the hamster would turn halfway toward its target, and then a slower finish. I basically combined both of them together to eliminate that weird behavior.
+  -   The speed of the running animation has been decreased by 25% to better differentiate it from the new sprinting animation, giving it a more natural pace.
+
+### Fixed
+- **Fixed Shoulder Hamsters Being Deleted on Player Death**
+  -   Resolved a critical bug where a shoulder-mounted hamster would be permanently deleted if the player died, even with `keepInventory` enabled. The system now correctly detects the player's respawn and safely dismounts the hamster at the player's death location.
+- **Fixed Hamster Suffocation on Dismount/Throw**
+  -   Implemented a robust safe-spawning algorithm that performs a multi-stage search for a valid, non-obstructed location when a hamster dismounts or lands from a throw. This should completely resolve all known suffocation bugs.
+- **Fixed Right-Click Stack Splitting in Hamster Inventory**
+  -   Corrected the underlying inventory logic to properly handle the `amount` parameter when removing items. Players can now correctly right-click to split stacks of items inside the hamster's cheek pouch inventory, just like in a vanilla chest.
+- **Fixed Thrown Hamster Particle Desync**
+  -   Adjusted the spawn position calculation for the in-flight particle trail. The trail now correctly originates from the hamster's model instead of appearing slightly ahead of it, which was most noticeable when viewing from a second player's perspective or with replay mods.
+- **Fixed Black Hamster Overlay Spawning**
+  -   Wild black hamsters will now only spawn with their solid base color. This makes their appearance in dark environments like caves more thematic and reserves their white overlay patterns as a special trait achievable only through breeding.
+
+---
+
 ## [2.3.0] - 2025-07-16
 
 # 1.20.1 Forge/Fabric/Quilt support has arrived!
@@ -56,7 +141,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - **Creeper Behavior:** Creepers will now flee from hamsters, similar to their behavior with cats. This should prevent them from detonating near your beloved pets and landscape. Thanks to [mikabean999](https://www.reddit.com/user/mikabean999/) on Reddit for the idea.
 - **Cheese Configurability:** Added new configuration options to control the hunger and saturation values restored by eating Cheese, allowing server owners to better balance food.
-
 
 ### Fixed
 - Resolved a critical issue where Hamsters would not spawn naturally in the world on the NeoForge version of the mod. This was caused by an incorrect implementation of the biome modification logic for the NeoForge loader. The fix replaces the faulty Java-based event listener with a data-driven biome modifier JSON that correctly hooks into NeoForge's world generation pipeline.
