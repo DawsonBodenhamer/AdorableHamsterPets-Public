@@ -18,6 +18,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [3.0.1] - 2025-08-02
+
+### Fixed
+- **Spammy Console Icky Gross Stuff**
+  -   Fixed my spammy `.info` level logging in `HamsterFollowOwnerGoal.java` that I had forgotten to switch back to `.trace`.
+
+---
+
 ## [3.0.0] - 2025-07-27
 
 # **The Heist & The Haste Update**
