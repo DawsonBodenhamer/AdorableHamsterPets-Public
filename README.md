@@ -312,7 +312,7 @@ Thanks to a basically heroic, caffeine-fueled refactor to the Architectury toolc
 Actually just kidding about the heroic caffeine-fueled part. It was more like terrified, GitHub conversation-fueled. Huge thanks to [**@fzzyhmstrs**](https://github.com/fzzyhmstrs) on GitHub / @ZeMonkey / @Cool Girl on Discord for all their help. It's doubtful you would be yeeting your hamsters on NeoForge right now if it weren't for them.
 
 ### **"What About More Minecraft Versions?"**
-Yes, that's the plan. The goal is to keep the mod updated for the latest versions of Minecraft while also backporting features to older, popular versions where feasible. Your hamster army's temporal conquest is inevitable.
+Yes, that's the plan. Once I get the mod out of beta, the goal is to keep it updated for the latest versions of Minecraft while also backporting features to older, popular versions where feasible. Your hamster army's temporal conquest is inevitable. I do have quite a few more features I want to add before the full release though, so don't hold your breath. Definitely join **[The Cheek Pouch](https://discord.gg/w54mk5bqdf)** Discord server to keep up with progress!
 
 </details>
 
@@ -349,7 +349,7 @@ You can also fine-tune nearly every feature down to the smallest detail. Adjust 
 
 The hamster wheel of "progress" never truly stops. Here's a peek at what might be scurrying out of the development pipeline, eventually:
 
-*   **Version Voracity:** My hamsters aim to colonize future Minecraft 1.21.x versions. Subject to API whims and developer sanity.
+*   **Version Voracity:** My hamsters aim to colonize more Minecraft versions, but I have quite a few more features I want to add before official release— only then will I begin to port to other versions.
 *   **The Art of Cheese:** The current milk-to-cheese recipe is placeholder. Expect a more involved, thematically appropriate cheese-making process in the future.
 *   **More Hamster Skins:** Expanding the variety of overlay patterns for even more unique-looking companions.
 *   **Shoulder Sync with Animation Mods:** Investigating better visual integration of the shoulder hamster when using player animation overhaul mods like "Fresh Animations." This is complex and depends on external factors.
