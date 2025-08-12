@@ -18,6 +18,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [3.1.0] - 2025-08-11
+
+### Added
+- **Sunflower De-Modding Station**
+  -   Added a simple shapeless crafting recipe to convert one custom, harvestable sunflower back into one vanilla sunflower. For when you need the original for... reasons.
+- **Advanced Dismount Engineering**
+  -   To prevent accidental hamster ejections when dismounting a horse or building a bridge in the nether (don't ask), the shoulder dismount mechanic is now highly configurable.
+  -   Players can now choose between using the `SNEAK` key or a new, separate `CUSTOM_KEYBIND` for dismounting.
+  -   Additionally, the action can be set to trigger on a `SINGLE_PRESS` or a quick `DOUBLE-TAP`, preventing conflicts with toggle-sneak or bridge-building. For the double-tap setting, the delay is also configurable. Find the new settings in the "Shoulder Hamster Settings" config group.
+
+### Changed
+- **Internal Hamster Wiring Overhaul**
+  -   The hamster's entire internal state-tracking system has been refactored. I've packed seventeen separate on/off switches (booleans) into one glorious, hyper-efficient integer using bit-masking. This change is purely under-the-hood but drastically reduces the chances of mod conflicts and crashes related to entity data. This was specifically to address a mod conflict on 1.20.1 with the Sortilege mod. Apparently it's trying to track a lot of data on Entities, and my mod is also doing that, so they had a conflict on slot #41. But even just in general, your hamsters are now more stable and less likely to have an existential crisis when another mod is present.
+
+### Fixed
+- **Corrected Overly-Trusting Hamsters**
+  -   Hamsters will no longer beg for food from any random player waving a cucumber slice. They will now only perform their adorable begging routine for their rightful owner, as intended. And for that matter, I also fixed a similar issue with the Diamond Stealing, Knocked Out, Diamond Sniff Celebration/Sulking, & Pink Petal Application/Cycling/Removal interactions, all of which were in the wrong spot in my interactMob method, which meant they were sneaking past the "is player the owner?" check.
+- **NeoForge Composting and Key-bind Registration**
+  -   Fixed an issue where compostable items (seeds, crops) were not functional on the NeoForge version of the mod. They now correctly register as compostable.
+  -   The "Throw Hamster" keybind, previously missing on NeoForge, now correctly appears in the Controls menu.
+- **Resolved Critical Mod Incompatibility Crash**
+  -   Fixed a hard crash caused by a `DataTracker` ID collision when running alongside certain other mods (like Sortilege on 1.20.1). The internal wiring overhaul (see "Changed") resolves this issue by significantly reducing the number of data slots the hamster entity occupies.
+
+---
+
 ## [3.0.1] - 2025-08-02
 
 ### Fixed
