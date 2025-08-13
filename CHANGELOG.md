@@ -18,43 +18,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [3.1.1] - 2025-08-12
+## [3.1.2] - 2025-08-13
 
-### Fixed
-- **Java Version Build Fix on 1.20.1**
-  -   Earlier today, I pushed out v3.1.0, and while it worked perfectly on Minecraft 1.21.1, the 1.20.1 versions would instantly crash as soon as you tried to load into a world.
+## <font color="GOLD">If you’re thinking _hey, this changelog looks awfully familiar…_ you’re not wrong.</font>
 
-**The culprit?**
-Behind the scenes, I’ve been working on a shiny new automated MC-publish pipeline (`publish.yml`) that builds the mod and uploads it to Modrinth & CurseForge AUTOMATICALLY for me. The problem is, Minecraft 1.20.x requires Java 17, but when I modified the `publish.ymml` file for my 1.20.1 branch, I forgot to switch it from java 21 to java 17, so it was still building those jars with Java 21 — which meant the files were incompatible right out of the box.
+### This is essentially the same feature set as 3.1.0 — but with one *critical* difference: these jars are ACTUALLY BUILT CORRECTLY. 
 
-**Why I didn't catch it:** I didn't even realize the typo was in the there, because I tested the jars that I had *built in my local environment—* not the ones that the MC-publish action had automatically generated.
-
-**What’s fixed:**
-
-* The workflow now builds 1.20.x jars using Java 17, so they run without crashing.
-* 1.21.x builds where un-affected.
-
-Thanks for bearing with me while I iron out the wrinkles — this new pipeline will make future releases much smoother.
-
-**BTS** - Here's how the juicy `publish.yml` file works:
-* Automatically builds both Fabric/Quilt and Forge versions in a single workflow
-* Publishes each build to both Modrinth and CurseForge with correct, consistent file names
-* Attaches changelog content directly from the separate public repository for each release
-* Includes explicit dependency listings for both Modrinth and CurseForge to ensure proper mod loading
-* Supports multiple Minecraft versions with separate version strings for each loader
-* Allows manual or tag-based triggering for flexible release management
-* Keeps build and publish logic in one place for easier maintenance and fewer manual steps
-
-Anyway IT'S AWESOME
-
----
-
-Do you want me to also add a **short “BTS” section** explaining in layman’s terms what `publish.yml` actually does so your players get a peek under the hood? That could make the changelog a bit more engaging.
-
-
----
-
-## [3.1.0] - 2025-08-11
+Version 3.1.0’s jars (especially for 1.20.1) were missing a bunch of generated data files, because I had just finished implementing a new CI (Continuous Integration; i.e. 'automated workflow that publishes my jar files for me') configuration, and it had a slight but not so slight oversight. I’ve removed that release from Modrinth and CurseForge so nobody new grabs the broken jars. This is the fixed re-release, under a new version number, so everyone’s launcher will properly prompt for an update.
 
 ### Added
 - **Sunflower De-Modding Station**
@@ -69,6 +39,8 @@ Do you want me to also add a **short “BTS” section** explaining in layman’
   -   The hamster's entire internal state-tracking system has been refactored. I've packed seventeen separate on/off switches (booleans) into one glorious, hyper-efficient integer using bit-masking. This change is purely under-the-hood but drastically reduces the chances of mod conflicts and crashes related to entity data. This was specifically to address a mod conflict on 1.20.1 with the Sortilege mod. Apparently it's trying to track a lot of data on Entities, and my mod is also doing that, so they had a conflict on slot #41. But even just in general, your hamsters are now more stable and less likely to have an existential crisis when another mod is present.
 
 ### Fixed
+- **Publishing Mishap Autopsy**
+  - In 3.1.0, my CI pipeline built jars without running the data generators, so critical JSON assets never made it into the finished files. This slipped by on 1.21.1 because those generated files happened to be present from earlier work, but 1.20.1 exposed the issue immediately with crashes. However, I did not notice these crashes myself because I test with manually built jar files, not the ones that the CI pipeline automatically creates. This has now been fixed at the Gradle level so the problem cannot recur — `runDatagen` is now a build dependency for all relevant jar tasks.
 - **Corrected Overly-Trusting Hamsters**
   -   Hamsters will no longer beg for food from any random player waving a cucumber slice. They will now only perform their adorable begging routine for their rightful owner, as intended. And for that matter, I also fixed a similar issue with the Diamond Stealing, Knocked Out, Diamond Sniff Celebration/Sulking, & Pink Petal Application/Cycling/Removal interactions, all of which were in the wrong spot in my interactMob method, which meant they were sneaking past the "is player the owner?" check.
 - **NeoForge Composting and Key-bind Registration**
@@ -76,6 +48,18 @@ Do you want me to also add a **short “BTS” section** explaining in layman’
   -   The "Throw Hamster" keybind, previously missing on NeoForge, now correctly appears in the Controls menu.
 - **Resolved Critical Mod Incompatibility Crash**
   -   Fixed a hard crash caused by a `DataTracker` ID collision when running alongside certain other mods (like Sortilege on 1.20.1). The internal wiring overhaul (see "Changed") resolves this issue by significantly reducing the number of data slots the hamster entity occupies.
+
+### B.T.S.
+Here's how the superbly juicy magnificent and fantastic `publish.yml` file works:
+* Automatically builds both Fabric/Quilt and NeoForge versions in a single workflow
+* Publishes each build to both Modrinth and CurseForge with correct, consistent file names
+* Attaches a specific snippet of my changelog content directly from the separate public repository for each release
+* Includes explicit dependency listings for both Modrinth and CurseForge to ensure proper mod loading
+* Supports multiple Minecraft versions with separate version strings for each loader
+* Allows manual or tag-based triggering for flexible release management
+* Keeps build and publish logic in one place for easier maintenance and fewer manual steps
+
+Anyway IT'S AWESOME
 
 ---
 
