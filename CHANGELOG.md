@@ -21,9 +21,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [3.1.1] - 2025-08-12
 
 ### Fixed
-- **Missing Data on 1.20.1**
-  -   Yes... all the "data" was missing from the 1.20.1 branch in version 3.1.0. How did this happen? I tested the jars before releasing them of course, but right before publishing, I made a last minute change which required switching branches. When I switched back to 1.20, I forgot to run datagen. So... no recipes, no textures, no models, no worldgen... OOF.
-  -   That is all. Apologies for the hassle! Thank you for your patience.
+- **Java Version Build Fix on 1.20.1**
+  -   Earlier today, I pushed out v3.1.0, and while it worked perfectly on Minecraft 1.21.1, the 1.20.1 versions would instantly crash as soon as you tried to load into a world.
+
+**The culprit?**
+Behind the scenes, I’ve been working on a shiny new automated MC-publish pipeline (`publish.yml`) that builds the mod and uploads it to Modrinth & CurseForge AUTOMATICALLY for me. The problem is, Minecraft 1.20.x requires Java 17, but when I modified the `publish.ymml` file for my 1.20.1 branch, I forgot to switch it from java 21 to java 17, so it was still building those jars with Java 21 — which meant the files were incompatible right out of the box.
+
+**Why I didn't catch it:** I didn't even realize the typo was in the there, because I tested the jars that I had *built in my local environment—* not the ones that the MC-publish action had automatically generated.
+
+**What’s fixed:**
+
+* The workflow now builds 1.20.x jars using Java 17, so they run without crashing.
+* 1.21.x builds where un-affected.
+
+Thanks for bearing with me while I iron out the wrinkles — this new pipeline will make future releases much smoother.
+
+**BTS** - Here's how the juicy `publish.yml` file works:
+* Automatically builds both Fabric/Quilt and Forge versions in a single workflow
+* Publishes each build to both Modrinth and CurseForge with correct, consistent file names
+* Attaches changelog content directly from the separate public repository for each release
+* Includes explicit dependency listings for both Modrinth and CurseForge to ensure proper mod loading
+* Supports multiple Minecraft versions with separate version strings for each loader
+* Allows manual or tag-based triggering for flexible release management
+* Keeps build and publish logic in one place for easier maintenance and fewer manual steps
+
+Anyway IT'S AWESOME
+
+---
+
+Do you want me to also add a **short “BTS” section** explaining in layman’s terms what `publish.yml` actually does so your players get a peek under the hood? That could make the changelog a bit more engaging.
+
 
 ---
 
