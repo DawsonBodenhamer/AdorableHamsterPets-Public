@@ -22,7 +22,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - **Missing Data on 1.20.1**
-  -   Yes... all the "data" was missing from the 1.20.1 branch in version 3.1.0. How did this happen? I tested the jars before releasing them of course, but right before publishing, I made a last minute change which required switching branches. When I switched back to 1.20, I forgot to run datagen. So... no recepies, no textures, no models, no worldgen... WHOOPS. Thanks for your patience!
+  -   Yes... all the "data" was missing from the 1.20.1 branch in version 3.1.0. How did this happen? I tested the jars before releasing them of course, but right before publishing, I made a last minute change which required switching branches. When I switched back to 1.20, I forgot to run datagen. So... no recipes, no textures, no models, no worldgen... OOF.
+  -   That is all. Apologies for the hassle! Thank you for your patience.
+
 ---
 
 ## [3.1.0] - 2025-08-11
