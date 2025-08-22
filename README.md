@@ -1,4 +1,8 @@
-![Adorable Hamster Pets Banner](https://i.imgur.com/tGpuQ3c.png)
+<p align="center">
+  <img src="https://i.imgur.com/DqnkGfu.png" alt="Adorable Hamster Pets Banner">
+</p>
+
+<br>
 
 <p align="center">
   <a href="https://modrinth.com/mod/adorable-hamster-pets/versions?l=fabric"><img src="https://i.imgur.com/IqQ3Y0J.png" alt="Fabric" width="150" height="auto"></a>
@@ -14,6 +18,8 @@
   <a href="https://modrinth.com/mod/adorable-hamster-pets"><img src="https://i.imgur.com/rJGFMCf.png" alt="Modrinth" width="250" height="auto"></a>
   <a href="https://www.curseforge.com/minecraft/mc-mods/adorable-hamster-pets"><img src="https://i.imgur.com/ts51S3Q.png" alt="CurseForge" width="298" height="auto"></a>
 </p>
+
+<br>
 
 <p>
   <a href="https://youtube.com/shorts/YEBDFItiOXA?si=lgGFLeAcsdrMn7qD">
