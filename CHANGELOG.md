@@ -5,16 +5,58 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [3.2.0] - 2025-08-23
 
 ### Added
-- 
+- **Multi-Pet Shoulder & Head Mount System**
+  -   Players can now have up to three hamsters mounted simultaneously: one on each shoulder and one on their head.
+  -   The mounting system will automatically place a hamster in the next available slot (Right Shoulder -> Left Shoulder -> Head).
+  -   Shoulder-mounted hamsters will automatically adjust their offset to fit both slim and wide player models, and will sit even further out to rest on top of equipped chestplates.
+  -   A new configurable dismount order (`LIFO`/`FIFO`) determines which hamster is removed first by the standard dismount key.
+  -   Added a client-side hand-swing animation when mounting a hamster to the player's shoulder.
+- **Dynamic & Reactive Shoulder Pet Animations**
+  -   Shoulder-mounted hamsters are now fully animated using their primary GeckoLib model and no longer use a separate, static vanilla model.
+  -   They dynamically cycle through standing, sitting, and unique, slot-specific "laying down" animations.
+  -   Hamsters now react when the player sprints by entering their "laying down" animation, as if holding on for dear life. A randomized micro-delay ensures each pet reacts independently.
+- **Configurable Animation Control for Shoulder Pets**
+  -   Added a new config group for "Animation Settings" to give players full control over shoulder pet behavior.
+  -   Players can disable the "Dynamic Animations" toggle to force all shoulder pets into a single, static pose using the "Forced Animation State" dropdown.
+  -   The duration of each dynamic state can be customized/randomized with "Min/Max Animation State Duration" sliders, controlling how long a hamster will stay in one pose before transitioning.
+  -   Added a `forceLayDownOnWalk` config option (disabled by default) that makes hamsters enter their "laying down" pose during any player movement, not just sprinting.
+- **Config-Driven Item Tags for All Interactions**
+  -   All hardcoded item checks have been replaced with a high-performance, config-driven system, allowing users to customize nearly every hamster interaction.
+  -   Players can now define custom lists of items or item tags for taming, standard feeding, buff foods, shoulder mounting, cheek pouch unlocking, and basically every other hamster interaction.
+  -   This new system includes built-in default compatibility for popular mods like **Farmer's Delight** and its addon **Cultural Delights**.
+- **Conditional Headshake Animations**
+  -   Added a new `anim_hamster_moving_headshake` animation.
+  -   When a hamster refuses a food item, it will now intelligently play either a stationary or a moving headshake animation depending on whether it is standing still or walking.
+- **Visual Height Adjustment on Snow Layers**
+  -   Hamsters will now render slightly higher when standing on snow layers, preventing their model from sinking into the snow and creating a more realistic and visually polished effect. Now your white hamsters won't be so invisible in snow biomes! Lol.
+- **Fresh Moves Compatibility for Shoulder Hamsters**
+  -   The new shoulder pet rendering system now supports player animation-overhaul resource packs like [**Fresh Moves**](https://modrinth.com/resourcepack/tras-fresh-player).
+  -   Shoulder-mounted hamsters are now anchored directly to the player's animated body parts (arms and head), allowing them to realistically move and bounce along with the player's enhanced walk cycle.
 
 ### Changed
-- 
+- **AppleSkin Compatibility for Configurable Food**
+  -   The `CheeseItem`'s properties are now fully dynamic, ensuring that changes to its nutrition or saturation values in the config are correctly reflected in AppleSkin's "on-eat" HUD preview.
+- **Shoulder Mounting Behavior**
+  -   The logic has been updated to allow players to mount a hamster onto their shoulder with a lure item (like cheese) even while sneaking.
+- **Wander AI Frequency**
+  -   The default chance for a hamster's idle `WanderAroundFarGoal` to activate has been slightly increased, making them a bit more active when not following the player.
+- **Reworked mob fleeing behavior from hamsters.**
+  - Replaced the hardcoded Creeper-fleeing mechanic with a new configurable system. Ravagers and Spiders will now flee from hamsters by default, restoring the unique anti-Creeper role to vanilla cats. These new fleeing behaviors can be individually toggled in the config.
+- **Hamster Textures**
+  - Increased the saturation of the lavender hamster variant's texture to make it appear more purple and less gray.
+  - Slightly tweaked two of the white overlay textures to make them look a little bit cuter— very subtle changes here.
 
 ### Fixed
--
+- **Baby Shoulder Pet Rendering Offset**
+  -   Corrected the vertical offset for baby shoulder-mounted hamsters, ensuring they now move up and down correctly with the player's model when sneaking.
+- **Hamster Suffocation**
+  -   Implemented a "self-rescue" mechanic for hamsters that have been thrown. If they somehow manage to phase inside a block, they will now automatically teleport upwards to the nearest safe block, preventing suffocation deaths. 
+- **AI Goal Visual Flickering**
+  -   Resolved a visual glitch where the hamster's head would flicker during its wander animation by preventing the `LookAt` and `Wander` goals from running at the same time.
+  -   The effective range of the `HamsterLookAtEntityGoal` was slightly reduced to prevent the hamster from looking up at an unnatural angle when the player is nearby but not directly adjacent.
 
 ---
 
