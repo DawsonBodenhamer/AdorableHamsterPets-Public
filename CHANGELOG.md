@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.2.0] - 2025-08-23
 
+# **The Multi-Shoulder Hamster & Mega-Configurability Update**
+
+### Just when you thought your shoulders were safe, I've gone and turned them into a hamster condominium. This update completely overhauls the shoulder pet system, adds a frankly irresponsible amount of configuration, injects a hefty dose of unnecessary realism, and more!
+
 ### Added
 - **Multi-Hamster Shoulder & Head Mount System**
   -   Players can now have up to three hamsters mounted simultaneously: one on each shoulder and one on their head.
