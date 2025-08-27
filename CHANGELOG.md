@@ -8,19 +8,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [3.2.0] - 2025-08-23
 
 ### Added
-- **Multi-Pet Shoulder & Head Mount System**
+- **Multi-Hamster Shoulder & Head Mount System**
   -   Players can now have up to three hamsters mounted simultaneously: one on each shoulder and one on their head.
   -   The mounting system will automatically place a hamster in the next available slot (Right Shoulder -> Left Shoulder -> Head).
   -   Shoulder-mounted hamsters will automatically adjust their offset to fit both slim and wide player models, and will sit even further out to rest on top of equipped chestplates.
-  -   A new configurable dismount order (`LIFO`/`FIFO`) determines which hamster is removed first by the standard dismount key.
+  -   A configurable dismount order (`LIFO`/`FIFO`) determines which hamster is removed first by the standard dismount key.
   -   Added a client-side hand-swing animation when mounting a hamster to the player's shoulder.
-- **Dynamic & Reactive Shoulder Pet Animations**
+- **Dynamic & Reactive Shoulder Hamster Animations**
   -   Shoulder-mounted hamsters are now fully animated using their primary GeckoLib model and no longer use a separate, static vanilla model.
   -   They dynamically cycle through standing, sitting, and unique, slot-specific "laying down" animations.
-  -   Hamsters now react when the player sprints by entering their "laying down" animation, as if holding on for dear life. A randomized micro-delay ensures each pet reacts independently.
-- **Configurable Animation Control for Shoulder Pets**
-  -   Added a new config group for "Animation Settings" to give players full control over shoulder pet behavior.
-  -   Players can disable the "Dynamic Animations" toggle to force all shoulder pets into a single, static pose using the "Forced Animation State" dropdown.
+  -   Hamsters now react when the player sprints by entering their "laying down" animation, as if holding on for dear life. A randomized micro-delay ensures each hamster reacts independently.
+- **Physics-Based Animation for Shoulder Hamsters**
+  -   Shoulder-mounted hamsters now have a dynamic, physics-lite simulation applied to them, making them feel more alive.
+  -   **Vertical Bounce:** Hamsters will bounce on the player's shoulder in response to jumping and falling, with their motion driven by the player's vertical velocity.
+  -   **Squash and Stretch:** The hamster's model will visually squash and stretch to simulate inertia and impact forces, making jumps and landings feel more impactful.
+  -   **Impact Effects:** A unique squash effect and a new custom sound effect will now trigger at the moment a hamster lands back on the shoulder after a fall or jump, with the sounds staggered for a more natural feel when multiple hamsters are mounted.
+- **Configuration Options for Shoulder Hamster Audio**
+  - Added a "Silence Idle Sounds" toggle to mute the ambient squeaks from shoulder hamsters.
+  - Added a "Silence Physics Sounds in First-Person" toggle to mute the new landing/bounce sound effect specifically when in first-person view.
+- **Configurable Animation Control for Shoulder Hamsters**
+  -   Added a config group for "Animation Settings" to give players full control over shoulder hamster behavior.
+  -   Players can disable the "Dynamic Animations" toggle to force all shoulder hamsters into a single, static pose using the "Forced Animation State" dropdown.
   -   The duration of each dynamic state can be customized/randomized with "Min/Max Animation State Duration" sliders, controlling how long a hamster will stay in one pose before transitioning.
   -   Added a `forceLayDownOnWalk` config option (disabled by default) that makes hamsters enter their "laying down" pose during any player movement, not just sprinting.
 - **Config-Driven Item Tags for All Interactions**
@@ -33,12 +41,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Visual Height Adjustment on Snow Layers**
   -   Hamsters will now render slightly higher when standing on snow layers, preventing their model from sinking into the snow and creating a more realistic and visually polished effect. Now your white hamsters won't be so invisible in snow biomes! Lol.
 - **Fresh Moves Compatibility for Shoulder Hamsters**
-  -   The new shoulder pet rendering system now supports player animation-overhaul resource packs like [**Fresh Moves**](https://modrinth.com/resourcepack/tras-fresh-player).
-  -   Shoulder-mounted hamsters are now anchored directly to the player's animated body parts (arms and head), allowing them to realistically move and bounce along with the player's enhanced walk cycle.
+  -   The new shoulder hamster rendering system automatically supports player animation-overhaul resource packs like [**Fresh Moves**](https://modrinth.com/resourcepack/tras-fresh-player), because shoulder hamsters are now anchored directly to the player's animated body parts (arms and head), allowing them to realistically move and bounce along with the player's enhanced walk cycle.
 
 ### Changed
 - **AppleSkin Compatibility for Configurable Food**
-  -   The `CheeseItem`'s properties are now fully dynamic, ensuring that changes to its nutrition or saturation values in the config are correctly reflected in AppleSkin's "on-eat" HUD preview.
+  -   The `CheeseItem`'s properties are now fully dynamic*, ensuring that changes to its nutrition or saturation values in the config are correctly reflected in AppleSkin's "on-eat" HUD preview. **Unfortunately due to major API changes between MC versions, this only works on 1.21.1.*
 - **Shoulder Mounting Behavior**
   -   The logic has been updated to allow players to mount a hamster onto their shoulder with a lure item (like cheese) even while sneaking.
 - **Wander AI Frequency**
@@ -50,7 +57,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Slightly tweaked two of the white overlay textures to make them look a little bit cuter— very subtle changes here.
 
 ### Fixed
-- **Baby Shoulder Pet Rendering Offset**
+- **Hamster Teleportation**
+  -   Fixed a bug on 1.20.1 where hamsters would not teleport to their owner.
+- **Baby Shoulder Hamster Rendering Offset**
   -   Corrected the vertical offset for baby shoulder-mounted hamsters, ensuring they now move up and down correctly with the player's model when sneaking.
 - **Hamster Suffocation**
   -   Implemented a "self-rescue" mechanic for hamsters that have been thrown. If they somehow manage to phase inside a block, they will now automatically teleport upwards to the nearest safe block, preventing suffocation deaths. 
