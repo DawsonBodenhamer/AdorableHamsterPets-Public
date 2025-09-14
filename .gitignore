@@ -1,0 +1,51 @@
+# =================================================
+# IntelliJ IDEA
+# =================================================
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# =================================================
+# Gradle & Build Output
+# =================================com
+**/.gradle/
+**/build/
+**/out/
+
+# Platform-specific build outputs
+/fabric/build/
+/neoforge/build/
+
+# =================================================
+# Architectury & Loom
+# =================================================
+# Generated folders
+**/run/
+**/runs/
+**/dev/
+**/jars/
+
+# Specific module run dirs
+/fabric/run/
+/forge/run/
+/neoforge/run/
+
+# Generated files
+*dev.jar
+*dev-shadow.jar
+*sources.jar
+*-fabric.jar
+*-forge.jar
+*-neoforge.jar
+*-all.jar
+
+# Generated data and resources
+**/src/main/generated/
+
+# =================================================
+# Logs and other temporary files
+# =================================================
+logs/
+**/*.log
+.DS_Store
