@@ -41,20 +41,21 @@ Thanks to Crimson Gaming for the Showcase!
 
 ## <font color="orange">TL;DR Features, for the Impatient</font>
 
-*  #### **73 fur variants** – *(genetics! science! questionable breeding decisions!)*
-*  #### **Hyper-Configurable** – *control nearly every feature, from spawning to item stealing*
-*  #### **Custom advancement tab** – *gamify your rodent wrangling*
-*  #### **Taming with Sliced Cucumber** – *bribe your way to squeaky friendship*
-*  #### **Shoulder-Surfing Perks** – *portable creeper radar & diamond divination, powered by cheese*
-*  #### **Hamster Yeet™ (press G)** – *turns your shoulder buddy into a concussion-powered projectile*
-*  #### **Diamond Stealing** – *your hamster plays high-stakes keep-away with your valuables*
-*  #### **Potent Vegetables** – *stuff their face with Steamed Green Beans and witness the chaotic sprint-fest*
-*  #### **Diamond Sniffing** –  complete with dramatic sulking animations if it accidentally finds gold instead
-*  #### **Cheek Pouches of Holding** – six inventory slots *inside the hamster* (cheeks visibly expand when full)
-*  #### **Dynamic naps, personalities, sleepy-time & idle animations** – *because realism*
-*  #### **Automatic Eating From Cheeks** – *they'll take a snack break on their own if they have Hamster Food Mix*
-*  #### **Wild Cucumber & Green Bean Bushes** – *for foraging farmable seeds... or decor, if you're into that*
-*  #### **Cheese Crafting** – *surprisingly moist snack for players; slips right down the old gullet*
+*   #### **73 fur variants** – <font color="gray">*(genetics! science! questionable breeding decisions!)*</font>
+*   #### **Hyper-Configurable** – <font color="gray">*control nearly every feature, from spawning to yeet velocity*</font>
+*   #### **Custom advancement tab** – <font color="gray">*gamify your rodent wrangling*</font>
+*   #### **Taming with Sliced Cucumber** – <font color="gray">*bribe your way to squeaky friendship*</font>
+*   #### **Wear Up to Three Hamsters** – <font color="gray">*mount them on your shoulders and head, jiggle physics included*</font>
+*   #### **Shoulder-Surfing Perks** – <font color="gray">*portable creeper radar & diamond divination, powered by cheese*</font>
+*   #### **Hamster Yeet™ (press G)** – <font color="gray">*turns your shoulder buddies into concussion-powered projectiles*</font>
+*   #### **Diamond Stealing** – <font color="gray">*your hamsters play high-stakes keep-away with your valuables*</font>
+*   #### **Potent Vegetables** – <font color="gray">*stuff their face with Steamed Green Beans and witness the chaotic sprint-fest*</font>
+*   #### **Diamond Sniffing** – <font color="gray">*complete with dramatic sulking animations if it accidentally finds gold instead*</font>
+*   #### **Cheek Pouches of Holding** – <font color="gray">*six inventory slots *inside the hamster* (cheeks visibly expand when full)*</font>
+*   #### **Dynamic naps, personalities, sleepy-time & shoulder animations** – <font color="gray">*because realism*</font>
+*   #### **Automatic Eating From Cheeks** – <font color="gray">*they can snack on their own if they have Hamster Food Mix*</font>
+*   #### **Wild Cucumber & Green Bean Bushes** – <font color="gray">*for foraging farmable seeds... or decor, if you're into that*</font>
+*   #### **Cheese Crafting** – <font color="gray">*surprisingly moist snack for players; slips right down the old gullet*</font>
 
 ## <font color="orange">Or If You Prefer Juicy Details</font>
 
@@ -65,12 +66,20 @@ Thanks to Crimson Gaming for the Showcase!
 
 You get one automatically the first time you join a world with this mod (unless you turned that off in the config, you rebel). It contains *hints*. Read it. Or use it as kindling. See if I care. Lost it? Craft another with a Book and some Sliced Cucumber. Don't ask why Sliced Cucumber. It's a long story.
 
+<p align="left">
+  <img src="https://i.imgur.com/qlYu7yQ.jpeg" alt="The Hamster Tips Guide Book">
+</p>
+
 </details>
 
 <details>
 <summary>Immersive Advancements</summary>
 
 A custom advancements tab, "The Hamster Life," guides you through the thrilling world of hamster husbandry, from finding your first seed to... well, yeeting. (Thanks to `@MylesGit` on GitHub for the original advancement tree suggestion!)
+
+<p align="left">
+  <img src="https://i.imgur.com/sbNjWGr.jpeg" alt="Immersive Advancements">
+</p>
 
 </details>
 
@@ -81,6 +90,11 @@ Got a heavily modded world? Good news— my spawning system is set up to be incr
 
 Now, for the default zoology lesson. With nine base coats and eight overlay patterns (plus the unique White color), there are a staggering **73 possible hamster variants** to discover. Hamsters found shivering in snowy plains look different from those basking in deserts. Shocking, I know. They even pass these stunningly diverse palettes on to their offspring, with a polite attempt to not *exactly* copy their parents' overlay patterns, ensuring maximum genetic *variety* in your pocket pet population.
 
+<p align="center">
+  <img src="https://i.imgur.com/wsQEDx3.jpeg" alt="Biome Variants & Genetics" width="48%">&ensp;
+  <img src="https://i.imgur.com/xUy6Tb1.jpeg" alt="Biome Variants & Genetics" width="48%">
+</p>
+
 **A Field Guide to Hamster Habitats:**
 *   **Orange & Cream:** The most common type, often found sunning themselves in Plains, Savannas, Deserts, and non-frigid Beaches. Badlands also seem to attract the Orange ones.
 *   **Chocolate:** Prefers the shaded canopy of Forests and non-snowy Taigas (excluding Cherry Groves, those are special).
@@ -90,7 +104,10 @@ Now, for the default zoology lesson. With nine base coats and eight overlay patt
 *   **Blue:** A master of glacial camouflage. This rare variant's cool, blue-tinted fur is an uncanny match for the shimmering ice and packed snow of the most frigid landscapes. While vary rare in the default game, (only spawns in Ice Spikes), its love for ice means it might also be spotted in other crystalline wonderlands added by mods.
 *   **Lavender:** Less about survival and more about style, this variant's dusty purple coat is a perfect match for the fantastical flora of magical biomes. Look for them amidst the pink petals of Cherry Groves and the strange hues of Mushroom Fields. Their preference for the peculiar means you might also find them in other enchanted forests or mystical groves added by mods.
 
-I also plan to add new darker fur patches in the future, which will add ~50-80 additional possible fur textures!
+**Future Plans:**
+*   Dark fur patches
+*   Additional model shapes and sizes (shoulder mounting needs to be considered)
+*   Join **[The Cheek Pouch](https://discord.gg/w54mk5bqdf)** Discord server if you have your own ideas! I'm all ears.
 
 </details>
 
@@ -139,7 +156,11 @@ They'll energetically implement hamster kung fu on enemies (yours or theirs). Es
 <details>
 <summary>Shoulder Surfing— with *Perks*</summary>
 
-Lure your nearest owned hamster onto your shoulder with the irresistible siren call of **Cheese**. (Or if you prefer boring explanations: right-click them with it). They'll offer helpful alerts about nearby Creepers and possibly valuable shiny rocks that start with a D, and rhyme with Simon. Kind of. They almost rhyme. Whatever. Complete with "scurrying onto your shoulder" and "leaping off in a huff" sound effects.
+Lure up to three of your tamed hamsters onto your person with the irresistible siren call of Cheese. They'll offer helpful alerts about nearby threats and possibly valuable shiny rocks. They're smart enough to find the next available perch—one for each shoulder, and yes, one for your head.
+
+These aren't static decorations; they're fully animated, living shoulder buddies. Thanks to a custom physics simulation, they'll bounce realistically when you jump, float slightly when you fall, and satisfyingly squash back onto your shoulder when you land, complete with unique sound effects. They'll even hunker down and hold on for dear life when you sprint.
+
+They're also polite enough to make room for your gear, automatically shifting their position to sit neatly on top of your chestplate instead of clipping through it.
 
 </details>
 
@@ -217,11 +238,9 @@ Yes, inventory... *in their face*. Feed them **Hamster Food Mix** once to earn t
 </details>
 
 <details>
-<summary>Creeper Psychological Warfare</summary>
+<summary>Spider/Ravager Psychological Warfare</summary>
 
-**Psychological Warfare:** Creepers are utterly terrified of hamsters, just like cats. They'll flee on sight.
-
-In hindsight, I probably didn't need a whole section for this.
+**Ravagers** and **Spiders** are utterly terrified of hamsters. The sight of a tiny ball of fluff will send these menaces fleeing in the opposite direction. Why? Don't ask questions you don't want the answer to. This behavior is, of course, fully configurable if you feel the local monster population isn't suffering enough existential dread.
 
 </details>
 
@@ -273,7 +292,7 @@ Fun fact: I've already implemented new features like the custom advancement tree
 
 
 
-## <font color="teal">Dependencies (Stuff You Need Besides Questionable Life Choices)</font>
+## <font color="teal">Dependencies</font>
 <details>
 <summary>Click to expand.</summary>
 
@@ -299,7 +318,7 @@ Fun fact: I've already implemented new features like the custom advancement tree
 
 
 
-## <font color="teal">Loader & Version Support (The Multi-Verse of Rodents)</font>
+## <font color="teal">Loader & Version Support</font>
 <details>
 <summary>Click to expand.</summary>
 
@@ -324,7 +343,7 @@ Yes, that's the plan. Once I get the mod out of beta, the goal is to keep it upd
 
 
 
-## <font color="teal">Installation (The Annoying But Necessary Bit)</font>
+## <font color="teal">Installation</font>
 <details>
 <summary>Click to expand.</summary>
 
@@ -338,13 +357,23 @@ Yes, that's the plan. Once I get the mod out of beta, the goal is to keep it upd
 
 
 
-## <font color="teal">Configuration (For Those Who Like to Tinker)</font>
+## <font color="teal">Configuration & Mod Compatibilities</font>
 <details>
 <summary>Click to expand.</summary>
 
-Uses Fzzy Config for configuration. If you have Mod Menu, click the button. If not, venture into the `config/adorablehamsterpets` folder and edit `main.toml` by hand like some kind of digital caveman. The config includes extensive options to control exactly where hamsters and wild plants spawn, using biome IDs and tags for wide compatibility with other world gen mods.
+Uses [**Fzzy Config**](https://modrinth.com/mod/fzzy-config) for configuration. If you have Mod Menu, click the button. If not, venture into the `config/adorablehamsterpets` folder and edit `main.toml` by hand like some kind of digital caveman.
 
-You can also fine-tune nearly every feature down to the smallest detail. Adjust hamster health, melee damage, and taming difficulty. Control the velocity, damage, and cooldown of the Hamster Yeet. Decide exactly which items your hamsters consider valuable enough to steal, and set the duration and chase distances for the heist. Tweak the duration and potency of every stat in the Green Bean buff. Adjust the regrowth speed of sunflowers, the rarity of wild bushes, and even the nutritional value of cheese. Or just turn off the features you don't like entirely. Defaults are probably fine. Probably.
+**Out-of-the-Box Harmony:** I've already done the legwork to make this play nice with the big names. Hamster spawning is pre-tuned for gorgeous world-gen mods like [**Terralith**](https://modrinth.com/mod/terralith), so your lavender hamsters will actually show up in lavender fields, but It also works with massive mods like [**Oh The Biomes You'll Go**](https://modrinth.com/mod/biomesyougo) and [**Biomes O' Plenty**](https://modrinth.com/mod/biomes-o-plenty), though expect to see a lot of the common orange variant until I've had enough coffee to map out their 8,000+ biomes. Wild bushes and sunflowers should pop up just fine in any modded landscape.
+
+**Total Control Over Rodent Shenanigans:** For the advanced user who looks at a perfectly functional system and thinks, "I can make this weirder," the config file is your chaotic playground. There are no hard-coded hamster interaction items— everything can be modified. 
+*   **Redefine their diet.** This mod includes built-in compatibility with [**Farmer's Delight**](https://modrinth.com/mod/farmers-delight) and its addon, [**Cultural Delights**](https://modrinth.com/mod/cultural-delights). But why stop there? Make them demand Nether Stars for taming. Make them steal only dirt blocks. Whatever. Live your truth.
+*   **Fine-tune the physics.** Adjust the velocity, damage, and cooldown of the Hamster Yeet. Tweak the potency of the Green Bean zoomies.
+*   **Become a cheese tycoon, or nerf it into the ground.** The nutritional value of cheese is fully configurable and even syncs with [**AppleSkin**](https://modrinth.com/mod/appleskin)'s HUD on Minecraft 1.21.1 (older versions are out of luck due to API shenanigans).
+
+**Immersion, Because I'm Fancy Like That:** Don't like that your hamsters can be mounted with cheese so you changed it to diamonds in the config? Good news—the sound effects and particle systems are smart enough to keep up. When you mount your hamster, it won't make a "squish" sound anymore; it'll make a satisfying "clink" and sparkle with diamond particles. This dynamic system applies to several interactions, ensuring the audiovisual feedback always matches your custom configuration. Because details. 💅🏼 (Even works with custom modded items!)
+
+Thanks to the magic of Fzzy Config, all these settings are validated and synced from the server. That means *you* set the rules. Whatever you decide the taming difficulty, hamster damage, or acceptable cheese nutrition levels are, your players will abide by it. They can't change these core settings locally unless you give them the keys to the kingdom. A few purely cosmetic client-side settings are the exception, but the important stuff? That's all you.
+
 </details>
 
 
@@ -355,12 +384,12 @@ You can also fine-tune nearly every feature down to the smallest detail. Adjust 
 
 The hamster wheel of "progress" never truly stops. Here's a peek at what might be scurrying out of the development pipeline, eventually:
 
-*   **Version Voracity:** My hamsters aim to colonize more Minecraft versions, but I have quite a few more features I want to add before official release— only then will I begin to port to other versions.
-*   **The Art of Cheese:** The current milk-to-cheese recipe is placeholder. Expect a more involved, thematically appropriate cheese-making process in the future.
-*   **More Hamster Skins:** Expanding the variety of overlay patterns for even more unique-looking companions.
-*   **Shoulder Sync with Animation Mods:** Investigating better visual integration of the shoulder hamster when using player animation overhaul mods like "Fresh Animations." This is complex and depends on external factors.
-*   **The "Snack of Yestermouth":** A peculiar item formed when multiple food types are left in a hamster's cheek pouch for an extended period (accelerated by rotten flesh). Its purpose? Still under... *fermentation*. It will likely serve a unique, helpful, if slightly gross, function.
-*   **So. Many. More. Ideas.:** The Discord server is overflowing with ideas. Lots of future plans in store!
+*   ✅ <font color="green">**DONE**</font> | **Shoulder Sync with Animation Mods:** Investigating better visual integration of the shoulder hamster when using player animation overhaul mods like "Fresh Animations." This is complex and depends on external factors.
+*   ❌ <font color="red">**PENDING**</font> | **Version Voracity:** My hamsters aim to colonize more Minecraft versions, but I have quite a few more features I want to add before official release— only then will I begin to port to other versions.
+*   ❌ <font color="red">**PENDING**</font> | **The Art of Cheese:** The current milk-to-cheese recipe is placeholder. Expect a more involved, thematically appropriate cheese-making process in the future.
+*   ❌ <font color="red">**PENDING**</font> | **More Hamster Skins:** Expanding the variety of overlay patterns for even more unique-looking companions.
+*   ❌ <font color="red">**PENDING**</font> | **The "Snack of Yestermouth":** A peculiar item formed when multiple food types are left in a hamster's cheek pouch for an extended period (accelerated by rotten flesh). Its purpose? Still under... *fermentation*. It will likely serve a unique, helpful, if slightly gross, function.
+*   ❌ <font color="red">**PENDING**</font> | **So. Many. More. Ideas.:** The Discord server is overflowing with ideas. Lots of future plans in store!
 
 Got a genius idea for the next feature that absolutely needs to exist? Bring your brilliant, weird, and wonderful ideas to **[The Cheek Pouch](https://discord.gg/w54mk5bqdf)** Discord Server. Make sure you select **"Share Your Genius"** in the screening questions to get the `@Idea Generator` role, and then unleash your creativity in the suggestions channel.
 
