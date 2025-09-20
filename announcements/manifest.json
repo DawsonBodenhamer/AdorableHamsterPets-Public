@@ -1,0 +1,32 @@
+{
+  "latest_version": "3.4.0",
+  "messages": [
+    {
+      "id": "update-3.4.0",
+      "kind": "update",
+      "semver": "3.4.0",
+      "title": "Update Available: v3.4.0",
+      "markdown": "messages/update-3.4.0.md",
+      "mandatory": true,
+      "published": "2025-09-21T12:00:00Z"
+    },
+    {
+      "id": "update-3.3.0",
+      "kind": "update",
+      "semver": "3.3.0",
+      "title": "What's New in v3.3.0",
+      "markdown": "messages/update-3.3.0.md",
+      "mandatory": true,
+      "published": "2025-09-20T12:00:00Z"
+    },
+    {
+      "id": "dummy-announcement",
+      "kind": "announcement",
+      "semver": "3.3.0",
+      "title": "A Test Announcement",
+      "markdown": "messages/dummy-announcement.md",
+      "mandatory": false,
+      "published": "2025-09-19T12:00:00Z"
+    }
+  ]
+}
