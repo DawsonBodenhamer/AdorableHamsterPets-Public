@@ -2,6 +2,15 @@
   "latest_version": "3.4.0",
   "messages": [
     {
+      "id": "long-text-test",
+      "kind": "announcement",
+      "semver": "3.3.0",
+      "title": "An Extremely Long Title to Test Dynamic Scaling and Text Wrapping Capabilities",
+      "markdown": "messages/long-text-test.md",
+      "mandatory": false,
+      "published": "2025-09-22T12:00:00Z"
+    },
+    {
       "id": "update-3.4.0",
       "kind": "update",
       "semver": "3.4.0",
