@@ -14,7 +14,7 @@
       "id": "update-3.4.0",
       "kind": "update",
       "semver": "3.4.0",
-      "title": "Update Available: v3.4.0",
+      "title": "v3.4.0 - The Exploding Hamster Update",
       "markdown": "messages/update-3.4.0.md",
       "mandatory": true,
       "published": "2025-09-21T12:00:00Z"
