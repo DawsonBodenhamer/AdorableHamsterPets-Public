@@ -1,5 +1,5 @@
 ### A Test Announcement
-This is an *optional* announcement. You should be able to dismiss this permanently.
+This is an *optional* announcement. You should be able to dismiss this permanently. A change has been made to this announcement for testing purposes.
 
 * Item one in a list.
 * Item two, for good measure.
