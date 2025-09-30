@@ -13,6 +13,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   -   Features a completely custom user interface, including a unique book texture and a custom-coded landing page layout with a wrapped, multi-line subtitle for a more polished presentation than what Patchouli offers by default.
   -   Implemented a dynamic text wrapping and pagination system for entry titles, ensuring that long or translated titles do not render off the edge of the page.
   -   Includes a robust backwards-compatibility system that automatically detects and upgrades any old guide books found in a player's inventory or any opened container to the new Patchouli version.
+- **Client-Side Announcement & Update Notification System**
+  -   Implemented a robust client-side notification system capable of fetching a `manifest.json` and individual markdown files from a public GitHub repository.
+  -   This allows for the delivery of announcements and "What's New" update notes to players without requiring a mod update.
+  -   The system intelligently compares the player's installed mod version against the latest version in the manifest to create "Update Available" notifications, which can be snoozed.
+- **Dynamic HUD & GUI Notification Icon**
+  -   Added a new notification icon (a bell with hamster ears) that appears on the main game HUD and compatible GUI screens when unread notifications are pending.
+  -   The icon is driven by a custom, render-frame-timed physics animator using a spring-damper model to create organic, natural motion. When moving between positions (e.g., when opening the recipe book), the icon smoothly accelerates and decelerates, with a slight rotational kick and overshoot for a more dynamic feel.
+  -   Upon reaching its destination, it performs a brief "settle wobble" before coming to a rest. The icon also features a periodic idle wiggle animation, and smoothly scales up on hover for satisfying tactile feedback.
+  -   The icon dynamically repositions itself to remain anchored to the corner of inventory screens, organically transitioning to its new location when the GUI shifts, such as when opening or closing the recipe book.
+  -   Its tooltip is dynamic, displaying context-aware text like "New update available," "New announcement," or "What's new in vX.Y.Z."
+- **Custom Markdown-Powered Announcement Viewer**
+  -   Created a new, custom GUI screen for displaying announcement and update content, replacing the standard Patchouli entry page for these notifications.
+  -   The viewer features a full Markdown renderer that supports headings, bold/italic text, lists, code spans, clickable links, and dividers.
+  -   Includes a set of vanilla-style buttons for actions like "Mark as Read," "Remind Me Later" (snooze), "Disable These," and "See Changelog," with dynamic positioning depending on which buttons are present.
+- **Virtual Patchouli Integration for Notifications**
+  -   Virtually injects two new categories ("Announcements" and "Update Notes") and their corresponding entries into the Hamster Tips guide book at runtime.
+  -   This leverages Patchouli's list-rendering and unread-marker system without requiring any physical json files in the mod's JAR.
+  -   Clicking a virtual entry opens the custom announcement GUI instead of the entry (because there is no entry), and mixins have been added to prevent the "Mark All Read" button from affecting these virtual entries, and to prevent them from showing up in main "Entry Index" list.
+- **New Configuration Options**
+  -   Added extensive new settings to the config to control the announcement system, including toggles for the HUD and in-GUI icons.
+  -   Players can customize the HUD icon's screen position, scale, and offset, as well as the offset for the in-GUI widget icon.
+  -   New `ConfigAction` buttons allow players to reset their entire announcement history or re-enable optional announcements if they were previously disabled.
 
 ### Changed
 - **Optimized Language File Generation**
