@@ -31,10 +31,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   -   Virtually injects two new categories ("Announcements" and "Update Notes") and their corresponding entries into the Hamster Tips guide book at runtime.
   -   This leverages Patchouli's list-rendering and unread-marker system without requiring any physical json files in the mod's JAR.
   -   Clicking a virtual entry opens the custom announcement GUI instead of the entry (because there is no entry), and mixins have been added to prevent the "Mark All Read" button from affecting these virtual entries, and to prevent them from showing up in main "Entry Index" list.
-- **New Configuration Options**
+- **New Announcement Icon Configuration Options**
   -   Added extensive new settings to the config to control the announcement system, including toggles for the HUD and in-GUI icons.
   -   Players can customize the HUD icon's screen position, scale, and offset, as well as the offset for the in-GUI widget icon.
   -   New `ConfigAction` buttons allow players to reset their entire announcement history or re-enable optional announcements if they were previously disabled.
+- **New Configuration Options for Health and Mounting**
+  -   Added `Wild Hamster Max Health` and `Tamed Hamster Max Health` settings, allowing players to customize the health pools for both wild and tamed hamsters independently.
+  -   Added an `Enable Force-Mount Keybind` option (disabled by default) that, when enabled, allows players to mount a nearby tamed hamster by pressing a dedicated keybind, without needing to hold a specific item.
+  -   Added a `Consume Shoulder-Mount Item` toggle (enabled by default) that controls whether the item used to lure a hamster onto the player's shoulder is consumed in the process.
+- **Farmer’s Delight Cutting Board Compatibility**
+  -   Added cutting board recipe support for cucumbers → sliced cucumbers.
+  -   Thanks to [Cashhew](https://discord.com/channels/1382334723333820568/1382334724000841847/1420075931992850442) for the contribution!
+- **Smart Pet-Ownership Algorithm (under the hood)**
+  -   New logic that recognizes your pets across Minecraft’s many creatures (wolves, cats, parrots, horses—and most modded pals).
+  -   It doesn’t just “check a box” — it can figure out ownership even when a pet only stores a hidden ID instead of a visible owner link.
+  -   Built to prevent friendly-fire even with all the chaos: thrown hamsters, indirect hits, and weird edge-cases from other mods. (See "Fixed" section for more details)
+  -   Designed to be fast and lightweight so it won’t slow your world down.
+  -   Future-proofed: works across loaders and should play nicely with most other mods out of the box.
 
 ### Changed
 - **Optimized Language File Generation**
@@ -42,6 +55,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   -   This results in a smaller, cleaner, and more efficient language file with no impact on in-game text. Easier translating!
 
 ### Fixed
+- **No More Pet-on-Pet Drama**
+  -   Thrown hamsters now bounce off your own tamed pets (wolves, cats, parrots, horses—and most modded pets) instead of hurting them.
+  -   I designed a friendly-fire **smart ownership algorithm** that figures out who owns what—even when a pet only remembers you by an internal ID.
+  -   Works both ways: your other pets can’t hurt your tamed hamsters either.
 - **Resolved Server Crash on Hamster Throw**
   -   Fixed a `NullPointerException` that would crash dedicated servers when a player used the "Throw Hamster" keybind.
   -   The crash was caused by server-to-client sound packets being registered only on the client, leading to an error when the server attempted to send them.
