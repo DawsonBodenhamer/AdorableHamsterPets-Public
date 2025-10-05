@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [3.3.0] - 2025-09-14
 
+# **The Patchouli Page-Turner Update**
+
+## Hamster Tips guide book graduates to Patchouli, and your game now gets a special update notes system that can pull live from my GitHub repo.
+
+THe Hamster Tips guidebook is completely overhauled with Patchouli's built-in tools + my own custom UI, smarter text wrapping, and automatic upgrades from the old guide book. A physics-simulated notification bell (with hamster ears) flags unread notes— all configurable and snoozeable— and virtual entries in Hamster Tips open the new markdown viewer without leaving the game. Under the hood, a new smart ownership algorithm ends pet-on-pet friendly fire, and translators also get a tidier language file.
+
 ### Added
 - **New Patchouli Guide Book**
   -   Replaced the original vanilla written book with a comprehensive, feature-rich guide book powered by the Patchouli library.
