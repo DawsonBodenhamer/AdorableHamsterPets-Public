@@ -9,15 +9,6 @@
       "published": "2025-10-04T12:00:00Z",
       "markdown": "messages/v3.3.0-whats-new.md",
       "mandatory": true
-    },
-    {
-      "id": "announcement-system-intro",
-      "title": "About That New Bell Icon...",
-      "semver": "3.3.0",
-      "published": "2025-10-05T18:00:00Z",
-      "kind": "announcement",
-      "mandatory": false,
-      "markdown": "announcements/announcement-system-intro.md"
     }
   ]
 }
