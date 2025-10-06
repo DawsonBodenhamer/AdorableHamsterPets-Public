@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [3.3.1] - 2025-10-06
+
+# The Server Sanity Patch
+
+## This is a quick but critical hotfix to address a series of unfortunate events that followed the 3.3.0 update, primarily aimed at making dedicated servers not immediately burst into flames.
+
+Long story short: dedicated servers should now launch without issue, and the new announcement system will no longer crash your client for the crime of being too efficient. Your game should be much happier now.
+
+### Fixed
+- **Resolved multiple dedicated server crashes on startup.**
+  -   Fixed an `AbstractMethodError` crash by correctly separating the registration of client-side packet handlers from the common registration of packet types.
+  -   Fixed an `InvalidMixinException` crash by moving several client-only mixin accessors (`ClickableWidgetAccessor`, `GuiBookAccessor`, etc.) to the client-specific section of the mixin configuration file.
+- **Fixed a `NullPointerException` when dismissing a single announcement.**
+  -   This occurred when the notification icon was clicked from an inventory screen with only one pending notification. The system now correctly uses the fully initialized virtual `BookEntry` from Patchouli's data, preventing the crash.
+- **Corrected the "See Changelog" button URL in the announcement screen.**
+  -   The URL was missing the required version and loader suffix, causing it to lead to a 404 page on Modrinth. It now generates the correct link for the specific version.
+
+---
+
 ## [3.3.0] - 2025-09-14
 
 # **The Patchouli Page-Turner Update**
