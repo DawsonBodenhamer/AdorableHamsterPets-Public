@@ -38,6 +38,9 @@ This patch is all about handing the controls over to you. Based on some fantasti
   -   A `NullPointerException` was reported by one person on game launch, likely caused by a race condition with the new announcement system in heavily modded environments. While I couldn't reproduce the crash myself, I've refactored the system to initialize itself on demand, which should resolve this kind of loading order issue. This change is safe and may prevent similar problems in the future.
 - **Removed the concept of "mandatory" announcements.**
   -   You are now the master of your own notification destiny. The system no longer distinguishes between optional messages and "mandatory" update notifications, giving you full control to dismiss, snooze, or disable any and all announcements as you see fit.
+- **Upgraded Fzzy Config library to resolve UI bugs.**
+  -   Updated from v0.7.0 to v0.7.3 to fix an issue where nested, collapsed groups in the config screen would incorrectly appear expanded by default. This should make navigating the configuration screen much less overwhelming.
+  -   This Fzzy Config update also resolves a data generation bug that was preventing tooltips from appearing for the "Survival Inventory" and "Creative Inventory" announcement bell icon offset settings.
 
 ---
 
