@@ -6,6 +6,41 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [3.3.2] - 2025-10-07
+
+# The More Polite Notifications Patch
+
+## The announcement system was always intended as a personal touch—a cozy newspaper to share news and updates directly while you sip your coffee. But your feedback made it clear that 'personal touch' can feel a bit intrusive when you've got two or three hundred other mods vying for your attention. I get it.
+
+This patch is all about handing the controls over to you. Based on some fantastic feedback, I've added a suite of new more accessible options to let you decide exactly how—or if—you see notifications. The goal is to keep the feature useful for those who want it, while making it completely unobtrusive for those who don't.
+
+### Added
+- **Added click-and-drag functionality to the announcement screen scrollbar.**
+  -   You can now scroll down on announcements by dragging the scrollbar handle with your mouse, in addition to using the mouse wheel.
+- **Enhanced control over the announcement system with new UI options and quality-of-life features.**
+  -   A new "Enable Announcements" master switch has been added to the config screen, allowing you to control all notification icons at once.
+  -   You can now instantly mark all announcements as read from a new button in the config screen.
+  -   A "Snooze (Session)" button is now available on the announcement screen to temporarily hide all notifications until the game is restarted.
+  -   Holding `Shift` while clicking "Mark As Read" on any announcement will now mark all pending notifications as read.
+
+### Changed
+- **The inventory key now closes the announcement screen.**
+  -   Pressing the inventory key (default 'E') while viewing an announcement will now correctly close the screen, mimicking standard Minecraft UI shenanigans.
+- **Overhauled the announcement screen's action buttons for clarity and control.**
+  -   The button layout has been reorganized into two rows and simplified. The old, confusing "Disable These" button has been replaced with a clearer "Disable All" button that permanently turns off the notification icons (this can be undone in the config).
+- **Patchouli's "Mark All as Read" button now includes announcements.**
+  -   The "Mark All as Read" button on the main page of the Hamster Tips guide book now correctly marks all pending announcements as read in both Patchouli's system and mine, so now it behaves exactly as you'd expect it to.
+
+### Fixed
+- **Resolved major UI scaling issues with the announcement screen.**
+  -   The entire announcement GUI (background, content, and buttons) now dynamically scales down to fit the available window space, preventing elements from being cut off.
+- **Attempted fix for a startup crash on NeoForge with large modpacks.**
+  -   A `NullPointerException` was reported by one person on game launch, likely caused by a race condition with the new announcement system in heavily modded environments. While I couldn't reproduce the crash myself, I've refactored the system to initialize itself on demand, which should resolve this kind of loading order issue. This change is safe and may prevent similar problems in the future.
+- **Removed the concept of "mandatory" announcements.**
+  -   You are now the master of your own notification destiny. The system no longer distinguishes between optional messages and "mandatory" update notifications, giving you full control to dismiss, snooze, or disable any and all announcements as you see fit.
+
+---
+
 ## [3.3.1] - 2025-10-06
 
 # The Server Sanity Patch
@@ -509,7 +544,7 @@ This update also includes a complete, config-driven overhaul of the entire biome
 ---
 
 ## [1.1.0] - 2025-05-19
-<!-- Replace YYYY-MM-DD with 1.1.0's release date -->
+
 ### Added
 - **Advancement Tree:** With distinct branches leading the player to explore different features.
 - Custom Advancement Tab ("The Hamster Life"):
@@ -572,7 +607,6 @@ This update also includes a complete, config-driven overhaul of the entire biome
 ---
 
 ## [1.0.1] - 2025-05-10
-<!-- Replace YYYY-MM-DD with 1.0.1's release date -->
 
 ### Changed
 - (Internal) Reorganized code structure and updated comments for `HamsterFleeGoal.java`, `HamsterSleepGoal.java`, `HamsterTemptGoal.java`, `HamsterShoulderFeatureRenderer.java`, and `PlayerEntityMixin.java` for improved readability.
@@ -591,7 +625,6 @@ This update also includes a complete, config-driven overhaul of the entire biome
 ---
 
 ## [1.0.0] - 2025-05-04
-<!-- Replace YYYY-MM-DD with 1.0.0's release date -->
 
 ### Added
 - First public version of Adorable Hamster Pets. Hello world!
