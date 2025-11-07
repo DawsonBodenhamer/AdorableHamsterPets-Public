@@ -9,15 +9,6 @@
       "published": "2025-10-04T12:00:00Z",
       "markdown": "messages/v3.3.0-whats-new.md",
       "mandatory": true
-    },
-    {
-      "id": "wonky_tooltips_note",
-      "title": "Quick Note on Wonky Tooltips",
-      "kind": "announcement",
-      "semver": "3.3.0",
-      "published": "2025-10-06T12:00:00Z",
-      "markdown": "messages/wonky_tooltips_note.md",
-      "mandatory": false
     }
   ]
 }
