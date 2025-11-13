@@ -5,6 +5,77 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.4.0] - 2025-11-13
+
+### Added
+- **Fully configurable biome-based variant spawning system**
+  -   The logic determining which hamster color variants spawn in which biomes is no longer hardcoded.
+  -   It is now entirely driven by new settings in the config file under `Spawn Settings > Variant Spawning by Biome`.
+  -   Users can now define custom lists of biome IDs, biome tags (including `c:` convention tags), and exclusion lists for each of the seven main color variants/biome groups (Blue, Lavender, White, Gray, Black, Cream, and Chocolate).
+  -   This provides significantly greater compatibility with world-generation mods like Terralith and Biomes O' Plenty, allowing users to fine-tune hamster diversity in any modded environment. The default values have been set to preserve the existing spawning behavior that was present already.
+  -   The Orange variant acts as the default fallback and will spawn in any biome where hamsters are allowed that does not meet the criteria for the other configured colors. That's why it does not have its own set of biome lists in the config.
+- **New Block: The Hamster Bed**
+  -   Introducing the Hamster Bed, a new block that serves as an anchor point for the new feature, **Tamed Wander Mode**.
+  -   Craftable with a new "Hamster Bedding" item and wood planks. It comes in all nine vanilla wood variants (Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, and Bamboo).
+  -   A tamed hamster can be linked to a bed by right-clicking it with the bed item in hand. The bed item will then store the hamster's data. Placing the linked bed in the world activates Wander Mode for that hamster.
+  -   Placing the bed while targeting the underside of a block places it upside-down, triggers a new advancement, disables the bed's sleep function until it is broken, and begins to spawn floaty, cozy leaf particles. More on that in a sec.
+- **New Item: Hamster Bedding**
+  -   Added "Hamster Bedding," a new crafting component for the Hamster Bed, made from a cozy blend of leaves, podzol, and dead bushes. _(The leaves will be replaced with **Leaf Litter** when I port the mod to 1.21.5, giving them a fun purpose)._
+  -   Beyond its use in crafting, this item can be used by hand or from a Dispenser to release a decorative cloud of leaf particles, perfect for adding a touch of autumnal ambiance to your life.
+- **Advanced Particle Physics System for Bedding**
+  -   The new leaf particles are driven by a custom client-side physics simulation with two distinct behavioral models.
+  -   Particles spawned from bed interactions use a standard gravity-and-friction model for a simple settling effect.
+  -   Particles spawned from an upside down Hamster Bed, the Hamster Bedding item or a dispenser use a "floaty" physics model, featuring a gentle pendulum-like sway based on sinusoidal motion.
+  -   This floaty mode includes a deterministic, spatially-coherent wind gust simulation. It uses a grid-based hashing function to ensure particles in the same area react to the same pseudo-random wind events, creating synchronized, emergent behavior.
+- **New Intelligent Indoor/Outdoor Detection Algorithm for Particles**
+  -   Implemented a custom algorithm to prevent the wind gusts from the particle system from having an effect on particles that are "indoors."
+  -   The system analyzes three environmental factors in real-time: skylight levels, vertical roof clearance, and horizontal openness (i.e., proximity to open doorways or windows).
+  -   It uses a high-performance caching system to minimize performance impact and employs hysteresis to prevent visual flickering when particles are near the threshold between an indoor and outdoor space.
+- **New Feature: Tamed Wander Mode**
+  -   Tamed hamsters can now be set to "Wander Mode," allowing them to roam freely within a configurable radius of their linked bed instead of constantly following the player.
+  -   **Activation:** Link a Hamster Bed item to a hamster, then place it in the world.
+  -   **Control:** Right-click the placed bed to toggle Wander Mode on or off for the linked hamster. Sneak + right-click to cycle through three wander distances (Near, Medium, Far), which are configurable.
+  -   Hamsters in Wander Mode will automatically seek out their bed to sleep based on the time of day (or the "Circadian Chaos" random timer) if enabled in the config.
+- **New Animations and Sounds for Sit/Stand/Sleep**
+  -   Added new animations for sitting down, standing up, and waking from sleep.
+  -   Added new `hamster_swish` and `hamster_thump` sound effects that play during these transitions, making interactions feel more realistic and fun.
+- **New Dispenser Behavior for Hamster Bedding**
+  -   Dispensers can now be loaded with Hamster Bedding. When activated, they will shoot out a decorative puff of the new floaty leaf particles, consuming one Hamster Bedding item.
+- **New Advancements for Wander Mode and Crafting**
+  -   Added a new branch to the "The Hamster Life" advancement tab to guide players through the new features.
+  -   New advancements include: "Artisanal Floor Mulch" (crafting bedding), "Luxury Leaf Pile" (crafting a bed), "Home is Where the Leaves Are" (linking a bed), "Sweet Dreams 'r Made of Leaves" (hamster sleeping in a bed), and a hidden challenge advancement for placing a bed upside-down.
+- **New Jade Integration for Hamster Bed**
+  -   If the Jade mod is installed, looking at a Hamster Bed will now display a detailed tooltip.
+  -   It shows which hamster the bed is linked to, whether Wander Mode is active, the current wander distance, and whether the hamster is allowed to sleep in the bed. Sneaking reveals detailed instructions on how to control the bed's functions.
+
+### Changed
+- **Announcement icon position in Creative Inventory**
+  -   The announcement bell icon that appears in the Creative Inventory screen has been moved from the bottom-right corner to the top-right corner of the screen.
+  -   This relocation prevents the icon from being overlapped by popular inventory utility mods such as JEI, REI, and EMI.
+  -   The maximum configurable X/Y offsets for the creative inventory widget have also been increased from 100 to 500 to allow for greater user customization.
+- **Improved the "Settle to Sleep" Animations**
+  - Tweaked the "Settle to Sleep" Animations to make them considerably cuter and more compatible with scenarios where the hamster might be "jumping into bed."
+- **Smarter Hamster Pathfinding (Bed Avoidance)**
+  -   Hamsters now have a custom navigation system that makes them aware of Hamster Beds.
+  -   By default, a hamster will now attempt to pathfind *around* any Hamster Bed that is not its own linked bed. After all, hamsters can be a bit territorial irl.
+  -   To prevent hamsters from getting stuck in complex environments, they will only try a few alternate routes before giving up and taking a more direct path. This avoidance behavior can be disabled in the config.
+
+### Fixed
+- **Personality ID assignment for command-spawned hamsters**
+  -   Resolved an issue where hamsters created using the `/summon` command were not being assigned a random "personality ID," causing them all to use the same animations and sitting poses.
+  -   This was caused by the `/summon` command bypassing the `initialize()` method where the ID was being set.
+- **Orange hamster spawning in Stony Shore biomes**
+  -   Fixed a bug where orange hamsters were incorrectly spawning in the `minecraft:stony_shore` biome instead of the intended light/dark gray variants.
+  -   The biome was being correctly excluded from the "white" variant spawn list but did not match any other specific criteria, causing it to fall back to the default orange variant. The spawn conditions for gray hamsters now explicitly include this biome.
+- **Startup crash (`StackOverflowError`) related to the announcement system**
+  -   Fixed a critical `StackOverflowError` crash that would occur on game launch if the "Snooze (Session)" feature had been used in the previous session.
+  -   The crash was caused by a recursive loop in the `AnnouncementManager`'s initialization logic. The redundant check causing the loop has been removed.
+- **"Snooze (Session)" functionality and state synchronization with Patchouli**
+  -   The "Snooze (Session)" button now correctly snoozes only the specific announcement being viewed, rather than incorrectly disabling all notifications globally for the session.
+  -   The underlying `disabled_until_launch` system, which was the source of the startup crash, has been completely removed and replaced with a non-persistent, in-memory list for session-snoozed items.
+  -   Fixed a bug where announcements snoozed for the session would remain marked as "read" in the Patchouli guide book after restarting the game. The system now correctly syncs the "unread" status of all pending notifications with Patchouli's data when a world is loaded.
+
+---
 
 ## [3.3.2] - 2025-10-07
 
