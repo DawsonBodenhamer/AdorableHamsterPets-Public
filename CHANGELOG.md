@@ -36,6 +36,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   -   **Activation:** Link a Hamster Bed item to a hamster, then place it in the world.
   -   **Control:** Right-click the placed bed to toggle Wander Mode on or off for the linked hamster. Sneak + right-click to cycle through three wander distances (Near, Medium, Far), which are configurable.
   -   Hamsters in Wander Mode will automatically seek out their bed to sleep based on the time of day (or the "Circadian Chaos" random timer) if enabled in the config.
+- **Added "The Great Escape" Guide Book Entry:**
+  - Details the crafting and use of the new Hamster Bed and Hamster Bedding items, featuring custom artwork.
+  - Explains how to link a bed to a hamster to enable "Tamed Wander Mode."
+  - Outlines all interactions for configuring wander distance, luring to bed, and unlinking.
 - **New Animations and Sounds for Sit/Stand/Sleep**
   -   Added new animations for sitting down, standing up, and waking from sleep.
   -   Added new `hamster_swish` and `hamster_thump` sound effects that play during these transitions, making interactions feel more realistic and fun.
