@@ -51,6 +51,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **New Jade Integration for Hamster Bed**
   -   If the Jade mod is installed, looking at a Hamster Bed will now display a detailed tooltip.
   -   It shows which hamster the bed is linked to, whether Wander Mode is active, the current wander distance, and whether the hamster is allowed to sleep in the bed. Sneaking reveals detailed instructions on how to control the bed's functions.
+- **Default Compatibility for Croptopia and Serene Seasons**
+  -   Integrated 24 new resource files directly into the mod to ensure out-of-the-box compatibility.
+  -   Cucumbers and Green Beans are now recognized as crops and vegetables by Croptopia.
+  -   All mod-added crops are now correctly recognized by Serene Seasons.
+  -   A huge thank you to [`@CasualAnimalEnjoyer`](https://github.com/CasualAnimalEnjoyer) for creating and sharing these compatibility files!
 
 ### Changed
 - **Announcement icon position in Creative Inventory**
