@@ -81,6 +81,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Ghost Shoulder Hamsters on Player Death**
   - Resolved a critical bug where shoulder-mounted hamsters would remain on the player after death, becoming permanently stuck. They will now correctly spawn at the player's death location in a 'knocked out' state, and a new config option allows players to keep them on their shoulder upon respawn if desired.
   - Implemented a backward-compatibility fix to ensure any hamsters that were previously stuck on a player's shoulder can now be dismounted correctly.
+- **Stale triggerable animations playing when entity is rendered**
+  -   Fixed a visual desynchronization where a one-shot animation (like the "Settle to Sleep" transition) triggered while a hamster was off-screen would play belatedly as soon as the hamster was rendered, causing it to be out of sync with the new sound effects.
+  -   A server-side cancellation scheduler now ensures that any triggered animation automatically expires if it has not been played by a client within its expected duration.
+- **Hamster and wild bush spawning on Sculk, Clay, and Moss blocks**
+  -   Black hamsters can now correctly spawn on Sculk blocks, decreasing their unintentional rareness in the Deep Dark biome.
+  -   Wild Green Bean and Wild Cucumber bushes can now generate on Clay and Moss blocks, allowing them to spawn more frequently in biomes like Swamps, especially if you have a mod that modifies the block palette of the ground in those areas.
 
 ---
 
