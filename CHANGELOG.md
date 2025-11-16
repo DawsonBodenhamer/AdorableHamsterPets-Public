@@ -78,6 +78,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   -   The "Snooze (Session)" button now correctly snoozes only the specific announcement being viewed, rather than incorrectly disabling all notifications globally for the session.
   -   The underlying `disabled_until_launch` system, which was the source of the startup crash, has been completely removed and replaced with a non-persistent, in-memory list for session-snoozed items.
   -   Fixed a bug where announcements snoozed for the session would remain marked as "read" in the Patchouli guide book after restarting the game. The system now correctly syncs the "unread" status of all pending notifications with Patchouli's data when a world is loaded.
+- **Ghost Shoulder Hamsters on Player Death**
+  - Resolved a critical bug where shoulder-mounted hamsters would remain on the player after death, becoming permanently stuck. They will now correctly spawn at the player's death location in a 'knocked out' state, and a new config option allows players to keep them on their shoulder upon respawn if desired.
+  - Implemented a backward-compatibility fix to ensure any hamsters that were previously stuck on a player's shoulder can now be dismounted correctly.
 
 ---
 
