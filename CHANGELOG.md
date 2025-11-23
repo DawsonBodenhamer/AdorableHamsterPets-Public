@@ -8,12 +8,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [3.4.0] - 2025-11-13
 
 ### Added
-- **Fully configurable biome-based variant spawning system**
+- **Fully Configurable Biome-Based Variant Spawning System**
   -   The logic determining which hamster color variants spawn in which biomes is no longer hardcoded.
   -   It is now entirely driven by new settings in the config file under `Spawn Settings > Variant Spawning by Biome`.
   -   Users can now define custom lists of biome IDs, biome tags (including `c:` convention tags), and exclusion lists for each of the seven main color variants/biome groups (Blue, Lavender, White, Gray, Black, Cream, and Chocolate).
   -   This provides significantly greater compatibility with world-generation mods like Terralith and Biomes O' Plenty, allowing users to fine-tune hamster diversity in any modded environment. The default values have been set to preserve the existing spawning behavior that was present already.
   -   The Orange variant acts as the default fallback and will spawn in any biome where hamsters are allowed that does not meet the criteria for the other configured colors. That's why it does not have its own set of biome lists in the config.
+- **Hamster Yeet Audio Overhaul & Visual Enhancement**
+  -   Completely re-worked the `hamster_flying` animation. It's now much cuter. Not that you'll ever see it, unless of course you record yourself throwing the hamster with the Flashback mod. Hint hint. It's quite fun.
+  -   Re-designed the `hamster_throw` sound so you can hear the hamster's ears flapping in the wind, which is part of the updated animation.
+  -   The throw sound now plays directly at the thrower's location, ensuring the full baked-in Doppler effect is heard instead of cutting off abruptly as the hamster flies outside Minecraft's 16-block sound attenuation cutoff.
+  -   Added a new predictive "incoming" sound effect (reverse Doppler) that plays at the target's location, giving victims a one-second audible warning before impact.
+  -   Thrown hamsters now dynamically rotate their pitch to match their flight trajectory (nosing up when ascending, down when falling) instead of remaining perfectly horizontal like a frisbee.
+  -   Implemented a custom sound broadcasting system for long-range throws. Players between 16 and 50 blocks away (who would normally hear silence due to vanilla limits) will now hear a faint impact sound, which dynamically adjusts its volume and changes type depending on whether the hamster impacted a block or an entity. Similar to the old logic, but now you'll actually hear something if you're trying to throw a 50-yard pass.
 - **New Block: The Hamster Bed**
   -   Introducing the Hamster Bed, a new block that serves as an anchor point for the new feature, **Tamed Wander Mode**.
   -   Craftable with a new "Hamster Bedding" item and wood planks. It comes in all nine vanilla wood variants (Oak, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, and Bamboo).
@@ -51,11 +58,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **New Jade Integration for Hamster Bed**
   -   If the Jade mod is installed, looking at a Hamster Bed will now display a detailed tooltip.
   -   It shows which hamster the bed is linked to, whether Wander Mode is active, the current wander distance, and whether the hamster is allowed to sleep in the bed. Sneaking reveals detailed instructions on how to control the bed's functions.
-- **Default Compatibility for Croptopia and Serene Seasons**
-  -   Integrated 24 new resource files directly into the mod to ensure out-of-the-box compatibility.
-  -   Cucumbers and Green Beans are now recognized as crops and vegetables by Croptopia.
-  -   All mod-added crops are now correctly recognized by Serene Seasons.
-  -   A huge thank you to [`@CasualAnimalEnjoyer`](https://github.com/CasualAnimalEnjoyer) for creating and sharing these compatibility files!
+- **Default Compatibility for Croptopia, Immersive Engineering, and Serene Seasons**
+  -   Integrated 30 new resource files directly into the mod to ensure out-of-the-box compatibility. A huge thank you to [`@CasualAnimalEnjoyer`](https://github.com/CasualAnimalEnjoyer) for creating and sharing these files!
+  -   Cucumbers and Green Beans are now recognized as valid recipe ingredients by **Croptopia**.
+  -   Cucumber and Green Bean crops are now categorized by **Serene Seasons**.
+  -   Cucumber and Green Bean crops can now be put inside **Immersive Engineering**'s Insulator.
 
 ### Changed
 - **Announcement icon position in Creative Inventory**
@@ -92,6 +99,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Hamster and wild bush spawning on Sculk, Clay, and Moss blocks**
   -   Black hamsters can now correctly spawn on Sculk blocks, decreasing their unintentional rareness in the Deep Dark biome.
   -   Wild Green Bean and Wild Cucumber bushes can now generate on Clay and Moss blocks, allowing them to spawn more frequently in biomes like Swamps, especially if you have a mod that modifies the block palette of the ground in those areas.
+- **Resolved "Unknown message ID" errors on dedicated servers (1.20.1)**
+  -   Split the 1.20.1 network packet registration into distinct client-to-server and server-to-client methods. (This had already been done on 1.21.1)
+  -   Ensured that the server correctly registers handlers for client packets (like render state updates), preventing disconnects or log errors when players interact with hamsters.
+- **Corrected Gray Hamster spawning in deserts.**
+  -   Gray hamsters were incorrectly spawning in sandy biomes like deserts, where Cream hamsters are intended to appear.
+  -   Added the `c:is_sandy` tag to the Gray variant's exclusion list to prevent this overlap.
+  -   **Note:** If you're still seeing Gray hamsters in deserts, navigate to `Spawn Settings > Variant Spawning > Gray Variants > Excluded Tags` in the config menu, right-click the setting, and select "Restore Defaults."
 
 ---
 
