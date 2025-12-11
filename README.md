@@ -51,6 +51,6 @@ Assets: look, don’t take.
 
 ---
 
-That’s it. Now please head over to here:
+That’s it. Now head over to here:
 
 ### 👉🏼👉🏼👉🏼 https://github.com/DawsonBodenhamer/AdorableHamsterPets-Source
