@@ -2,6 +2,8 @@
   <img src="https://raw.githubusercontent.com/DawsonBodenhamer/AdorableHamsterPets-Source/develop/media/AHP_new_banner_for_mod_page.png" width="100%" alt="Adorable Hamster Pets Banner">
 </p>
 
+<br>
+
 <div align="center">
 
 [![Modrinth Downloads](https://img.shields.io/modrinth/dt/adorable-hamster-pets?color=00AF5C&logo=modrinth&style=for-the-badge)](https://modrinth.com/mod/adorable-hamster-pets)
