@@ -1,5 +1,5 @@
 {
-  "latest_version": "3.4.0",
+  "latest_version": "3.4.3",
   "messages": [
     {
       "id": "whats-new-3.3.0",
@@ -27,6 +27,15 @@
       "published": "2025-11-26T12:00:00Z",
       "markdown": "messages/v3.4.0-whats-new.md",
       "mandatory": true
+    },
+    {
+      "id": "curseforge_moty_vote",
+      "title": "Vote to help us win Mod of the Year!",
+      "kind": "announcement",
+      "semver": "3.4.0",
+      "published": "2025-12-15T12:00:00Z",
+      "markdown": "messages/curseforge_moty_vote.md",
+      "mandatory": false
     }
   ]
 }
