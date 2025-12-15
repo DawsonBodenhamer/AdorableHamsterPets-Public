@@ -1,9 +1,10 @@
-# GIGANTIC NEWS: Adorable Hamaster Pets is a finalist in the CurseForge **Mod of the Year** contest!
+# GIGANTIC NEWS
+**Adorable Hamaster Pets is a finalist in the CurseForge Mod of the Year contest!**
 
 Out of 5,000 global nominations, *Adorable Hamster Pets* made the final cut! 
 Which is equal parts exciting and mildly terrifying, because now it’s up to **community voting**. (That’s you. Hi.)
 
-## [Click Here to Vote](https://www.curseforge.com/community-picks/minecraft/noxus-dec25)
+[Click Here to Vote](https://www.curseforge.com/community-picks/minecraft/noxus-dec25)
 
 If you enjoy the mod, please take a second to toss it a vote. It would mean the world to me!
 
@@ -25,4 +26,6 @@ More hamster content I want to keep building:
 - **Drop some support** in the comments on [Noxus’ YouTube video](https://youtu.be/W13nCbH776w)
   - Apparently some people think the mod is “too small” to deserve a win, which is… kind of wild. I’m choosing to interpret that as “they haven’t been pelted by a flying hamster yet.” Lol
 
-Thanks for getting us this far! I appreciate you <3
+---
+
+Thanks for getting the mod this far! I appreciate you <3
