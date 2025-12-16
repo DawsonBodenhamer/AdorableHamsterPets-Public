@@ -25,7 +25,7 @@ More hamster content I want to keep building:
 - **Spread the word** to friends / servers / fellow rodent appreciators
 - **Drop some support** in the comments on [Noxus’ YouTube video](https://youtu.be/W13nCbH776w)
   - Apparently some people think the mod is “too small” to deserve a win, which is… kind of wild. I’m choosing to interpret that as “they haven’t been pelted by a flying hamster yet.” Lol
-
+- Upvote this [Reddit post](https://www.reddit.com/r/feedthebeast/comments/1pnozus/adorable_hamster_pets_is_a_mod_of_the_year/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) to help it get some traction!
 ---
 
 Thanks for getting the mod this far! I appreciate you <3
