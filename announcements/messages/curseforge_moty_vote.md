@@ -9,8 +9,8 @@ I’m equal parts thrilled and overwhelmed (in the best way). Thank you.
 ## Want to show more support?
 If you’d like to help keep the momentum going, the easiest way is to follow the mod by clicking the little heart button:
 
-- **Follow on [**Modrinth**](https://modrinth.com/mod/adorable-hamster-pets)
-- **Follow on [**CurseForge**](https://www.curseforge.com/minecraft/mc-mods/adorable-hamster-pets)
+- Follow on [Modrinth](https://modrinth.com/mod/adorable-hamster-pets)
+- Follow on [CurseForge](https://www.curseforge.com/minecraft/mc-mods/adorable-hamster-pets)
 
 ---
 
