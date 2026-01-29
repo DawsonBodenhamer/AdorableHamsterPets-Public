@@ -1,32 +1,25 @@
 # GIGANTIC NEWS
-**Adorable Hamaster Pets is a finalist in the CurseForge Mod of the Year contest!**
+**Adorable Hamster Pets won CurseForge's Mod of the Year 2025!**
 
-Out of 5,000 global nominations, *Adorable Hamster Pets* made the final cut! 
-Which is equal parts exciting and mildly terrifying, because now it’s up to **community voting**. (That’s you. Hi.)
-
-[Click Here to Vote](https://www.curseforge.com/community-picks/minecraft/noxus-dec25)
-
-If you enjoy the mod, please take a second to toss it a vote. It would mean the world to me!
+Out of 5,000 global nominations, *Adorable Hamster Pets* made the final cut— 15 mods chosen by the jury of top mod devs— and then kept going and actually took the win.
+I’m equal parts thrilled and overwhelmed (in the best way). Thank you.
 
 ---
 
-## Real talk
-I don’t normally do the whole “please vote for me” thing, but times have been a bit rough lately— and winning would genuinely help me out with bills *and* let me keep pouring time into updates.
+## Want to show more support?
+If you’d like to help keep the momentum going, the easiest way is to follow the mod by clicking the little heart button:
 
-More hamster content I want to keep building:
-- **Acorn armor** (tiny. heroic.)
-- **New variants** (ancient nether hamsters, ender hamsters)
+- **Follow on [**Modrinth**](https://modrinth.com/mod/adorable-hamster-pets)
+- **Follow on [**CurseForge**](https://www.curseforge.com/minecraft/mc-mods/adorable-hamster-pets)
+
+---
+
+## What's next?
+- ~~**Acorn armor** (tiny. heroic.)~~ Done! (update to v3.5.0)
 - **More immersive cheese crafting** (yes, really)
+- **New variants** (ancient nether hamsters, ender hamsters)
 - **Accessories** (because yes)
 
 ---
 
-## A few other ways you can help
-- **Spread the word** to friends / servers / fellow rodent appreciators
-- **Drop some support** in the comments on [Noxus’ YouTube video](https://youtu.be/W13nCbH776w)
-  - Apparently some people think the mod is “too small” to deserve a win, which is… kind of wild. I’m choosing to interpret that as “they haven’t been pelted by a flying hamster yet.” Lol
-- Upvote this [Reddit post](https://www.reddit.com/r/feedthebeast/comments/1pnozus/adorable_hamster_pets_is_a_mod_of_the_year/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) to help it get some traction!
-
----
-
-Thanks for getting the mod this far! I appreciate you <3
+Thanks for your votes and support! I appreciate you <3
