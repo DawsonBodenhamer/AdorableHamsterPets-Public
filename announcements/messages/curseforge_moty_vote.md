@@ -15,7 +15,7 @@ If you’d like to help keep the momentum going, the easiest way is to follow th
 ---
 
 ## What's next?
-- ~~**Acorn armor** (tiny. heroic.)~~ Done! (update to v3.5.0)
+- ~~Acorn armor (tiny. heroic.)~~ Done! (update to v3.5.0)
 - **More immersive cheese crafting** (yes, really)
 - **New variants** (ancient nether hamsters, ender hamsters)
 - **Accessories** (because yes)
